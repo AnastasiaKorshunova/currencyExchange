@@ -17,8 +17,9 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class Exchange {
     private static final Logger logger = LogManager.getLogger(Exchange.class);
-    private static Exchange instance;
-    private static final Object lock = new Object();
+    private static class ExchangeHolder {
+        private static final Exchange INSTANCE = new Exchange();
+    }
 
     private final Map<String, BigDecimal> exchangeRates;
     private final ReadWriteLock ratesLock;
@@ -36,14 +37,7 @@ public class Exchange {
     }
 
     public static Exchange getInstance() {
-        if (instance == null) {
-            synchronized (lock) {
-                if (instance == null) {
-                    instance = new Exchange();
-                }
-            }
-        }
-        return instance;
+        return ExchangeHolder.INSTANCE;;
     }
 
     private void initializeExchangeRates() {
@@ -124,6 +118,8 @@ public class Exchange {
         if (!participant.getBalance().hasAmount(fromCurrency, amount)) {
             logger.warn("Transaction rejected: {} has insufficient {} balance",
                 participant.getName(), fromCurrency);
+            recordTransaction(null, participant, fromCurrency, toCurrency, amount, rate,
+                Transaction.TransactionStatus.REJECTED);
             return false;
         }
 
@@ -132,16 +128,9 @@ public class Exchange {
 
         updateExchangeRate(fromCurrency, toCurrency, amount);
 
-        Transaction completedTransaction = new Transaction.Builder()
-            .seller(participant)
-            .fromCurrency(fromCurrency)
-            .toCurrency(toCurrency)
-            .amount(amount)
-            .rate(rate)
-            .status(Transaction.TransactionStatus.COMPLETED)
-            .build();
+        recordTransaction(null, participant, fromCurrency, toCurrency, amount, rate,
+            Transaction.TransactionStatus.COMPLETED);
 
-        transactionHistory.add(completedTransaction);
 
         logger.info("Exchange transaction completed: {} exchanged {} {} for {} {} at rate {}",
             participant.getName(), amount, fromCurrency, convertedAmount, toCurrency, rate);
@@ -162,12 +151,16 @@ public class Exchange {
         if (!buyer.getBalance().hasAmount(toCurrency, convertedAmount)) {
             logger.warn("Transaction rejected: {} has insufficient {} balance",
                 buyer.getName(), toCurrency);
+            recordTransaction(buyer, seller, fromCurrency, toCurrency, amount, rate,
+                Transaction.TransactionStatus.REJECTED);
             return false;
         }
 
         if (!seller.getBalance().hasAmount(fromCurrency, amount)) {
             logger.warn("Transaction rejected: {} has insufficient {} balance",
                 seller.getName(), fromCurrency);
+            recordTransaction(buyer, seller, fromCurrency, toCurrency, amount, rate,
+                Transaction.TransactionStatus.REJECTED);
             return false;
         }
 
@@ -178,12 +171,30 @@ public class Exchange {
 
         updateExchangeRate(fromCurrency, toCurrency, amount);
 
-        transactionHistory.add(transaction);
+        recordTransaction(buyer, seller, fromCurrency, toCurrency, amount, rate,
+            Transaction.TransactionStatus.COMPLETED);
 
         logger.info("P2P transaction completed: {} <-> {}, {} {} at rate {}",
             buyer.getName(), seller.getName(), amount, fromCurrency, rate);
 
         return true;
+    }
+
+    private void recordTransaction(Participant buyer, Participant seller,
+                                   Currency fromCurrency, Currency toCurrency,
+                                   BigDecimal amount, BigDecimal rate,
+                                   Transaction.TransactionStatus status) {
+        Transaction recordedTransaction = new Transaction.Builder()
+            .buyer(buyer)
+            .seller(seller)
+            .fromCurrency(fromCurrency)
+            .toCurrency(toCurrency)
+            .amount(amount)
+            .rate(rate)
+            .status(status)
+            .build();
+
+        transactionHistory.add(recordedTransaction);
     }
 
     private void updateExchangeRate(Currency from, Currency to, BigDecimal transactionAmount) {

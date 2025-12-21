@@ -1,873 +1,293 @@
-2025-12-17 14:29:34.040 [main] INFO  com.exchange.Main - Currency Exchange Application Starting...
-2025-12-17 14:29:34.056 [main] INFO  com.exchange.util.DataReader - Loaded participant: Batbayar Erdene
-2025-12-17 14:29:34.056 [main] INFO  com.exchange.util.DataReader - Loaded participant: Tsetsegmaa Ganbold
-2025-12-17 14:29:34.056 [main] INFO  com.exchange.util.DataReader - Loaded participant: Enkhjargal Munkhbat
-2025-12-17 14:29:34.057 [main] INFO  com.exchange.util.DataReader - Loaded participant: Oyunerdene Tserendorj
-2025-12-17 14:29:34.057 [main] INFO  com.exchange.util.DataReader - Loaded participant: Altantsetseg Dorjsuren
-2025-12-17 14:29:34.057 [main] INFO  com.exchange.util.DataReader - Loaded participant: Ganzorig Tumur
-2025-12-17 14:29:34.057 [main] INFO  com.exchange.util.DataReader - Loaded participant: Sarangerel Boldbaatar
-2025-12-17 14:29:34.057 [main] INFO  com.exchange.util.DataReader - Loaded participant: Bayarmaa Enkhbat
-2025-12-17 14:29:34.058 [main] INFO  com.exchange.util.DataReader - Total 8 participants loaded from data/participants.txt
-2025-12-17 14:29:34.059 [main] INFO  com.exchange.service.Exchange - Exchange initialized with default rates
-2025-12-17 14:29:34.060 [main] INFO  com.exchange.service.Exchange - Participant registered: Batbayar Erdene
-2025-12-17 14:29:34.060 [main] INFO  com.exchange.service.Exchange - Participant registered: Tsetsegmaa Ganbold
-2025-12-17 14:29:34.060 [main] INFO  com.exchange.service.Exchange - Participant registered: Enkhjargal Munkhbat
-2025-12-17 14:29:34.060 [main] INFO  com.exchange.service.Exchange - Participant registered: Oyunerdene Tserendorj
-2025-12-17 14:29:34.060 [main] INFO  com.exchange.service.Exchange - Participant registered: Altantsetseg Dorjsuren
-2025-12-17 14:29:34.060 [main] INFO  com.exchange.service.Exchange - Participant registered: Ganzorig Tumur
-2025-12-17 14:29:34.060 [main] INFO  com.exchange.service.Exchange - Participant registered: Sarangerel Boldbaatar
-2025-12-17 14:29:34.061 [main] INFO  com.exchange.service.Exchange - Participant registered: Bayarmaa Enkhbat
-2025-12-17 14:29:34.061 [main] INFO  com.exchange.Main - Starting trading with 8 participants, 10 transactions each
-2025-12-17 14:29:34.062 [BalanceReporter] INFO  com.exchange.thread.BalanceReporter - Balance Reporter started, reporting every 3000 ms
-2025-12-17 14:29:34.064 [Participant-2] INFO  com.exchange.thread.ParticipantThread - Participant Tsetsegmaa Ganbold started trading
-2025-12-17 14:29:34.064 [Participant-1] INFO  com.exchange.thread.ParticipantThread - Participant Batbayar Erdene started trading
-2025-12-17 14:29:34.064 [Participant-3] INFO  com.exchange.thread.ParticipantThread - Participant Enkhjargal Munkhbat started trading
-2025-12-17 14:29:34.064 [Participant-4] INFO  com.exchange.thread.ParticipantThread - Participant Oyunerdene Tserendorj started trading
-2025-12-17 14:29:34.065 [main] INFO  com.exchange.Main - All participant threads submitted. Waiting for completion...
-2025-12-17 14:29:34.064 [Participant-5] INFO  com.exchange.thread.ParticipantThread - Participant Altantsetseg Dorjsuren started trading
-2025-12-17 14:29:34.065 [Participant-6] INFO  com.exchange.thread.ParticipantThread - Participant Ganzorig Tumur started trading
-2025-12-17 14:29:34.065 [Participant-7] INFO  com.exchange.thread.ParticipantThread - Participant Sarangerel Boldbaatar started trading
-2025-12-17 14:29:34.065 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:29:34.065 [Participant-8] INFO  com.exchange.thread.ParticipantThread - Participant Bayarmaa Enkhbat started trading
-2025-12-17 14:29:34.065 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:29:34.065 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:29:34.065 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:29:34.065 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:29:34.065 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:29:34.065 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:29:34.065 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:29:34.069 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 151.33 USD ($) for 522164.1650 MNT (₮) at rate 3450.50
-2025-12-17 14:29:34.069 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 185884.60 MNT (₮) for 53.90653400 USD ($) at rate 0.000290
-2025-12-17 14:29:34.070 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 353.63 USD ($) for 321.8033 EUR (€) at rate 0.91
-2025-12-17 14:29:34.069 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 440.31 USD ($) for 400.6821 EUR (€) at rate 0.91
-2025-12-17 14:29:34.069 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 309.43 EUR (€) for 1169877.4725 MNT (₮) at rate 3780.75
-2025-12-17 14:29:34.069 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 148.63 EUR (€) for 163.32965563 USD ($) at rate 1.098901
-2025-12-17 14:29:34.070 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 302278.13 MNT (₮) for 87.66065770 USD ($) at rate 0.000290
-2025-12-17 14:29:34.070 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 571.98 USD ($) for 1973616.99000000 MNT (₮) at rate 3450.500000
-2025-12-17 14:29:34.636 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:29:34.637 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:29:34.637 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 50.78 EUR (€) for 55.80219278 USD ($) at rate 1.098901
-2025-12-17 14:29:34.686 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:29:34.686 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:29:34.687 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 58.16 USD ($) for 200681.08005816 MNT (₮) at rate 3450.500001
-2025-12-17 14:29:34.781 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:29:34.781 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:29:34.782 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 65278.70 MNT (₮) for 50.78682860 USD ($) at rate 0.000778
-2025-12-17 14:29:34.886 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:29:34.887 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:29:34.887 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 416.66 EUR (€) for 1575287.29500000 MNT (₮) at rate 3780.750000
-2025-12-17 14:29:35.068 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:29:35.069 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:29:35.069 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 207.76 USD ($) for 189.06160000 EUR (€) at rate 0.910000
-2025-12-17 14:29:35.223 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:29:35.224 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:29:35.225 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 151.55 USD ($) for 522923.27515155 MNT (₮) at rate 3450.500001
-2025-12-17 14:29:35.442 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:29:35.442 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:29:35.443 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 154.28 EUR (€) for 583294.11000000 MNT (₮) at rate 3780.750000
-2025-12-17 14:29:35.528 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:29:35.529 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:29:35.529 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 927296.38 MNT (₮) for 781.71084834 USD ($) at rate 0.000843
-2025-12-17 14:29:35.635 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:29:35.635 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:29:35.636 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 144206.75 MNT (₮) for 38.07058200 EUR (€) at rate 0.000264
-2025-12-17 14:29:35.913 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:29:35.913 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:29:35.914 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 48803.21 MNT (₮) for 19.91170968 EUR (€) at rate 0.000408
-2025-12-17 14:29:36.049 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:29:36.049 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:29:36.050 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 529606.12 MNT (₮) for 937.40283240 USD ($) at rate 0.001770
-2025-12-17 14:29:36.053 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:29:36.054 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:29:36.055 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 368.66 USD ($) for 335.48060000 EUR (€) at rate 0.910000
-2025-12-17 14:29:36.082 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:29:36.082 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:29:36.083 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 152.05 USD ($) for 524648.52515205 MNT (₮) at rate 3450.500001
-2025-12-17 14:29:36.131 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:29:36.131 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:29:36.132 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 175.70 USD ($) for 159.88700000 EUR (€) at rate 0.910000
-2025-12-17 14:29:36.580 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:29:36.580 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:29:36.581 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 340.48 USD ($) for 1174826.24034048 MNT (₮) at rate 3450.500001
-2025-12-17 14:29:36.646 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:29:36.646 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:29:36.646 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 275.79 USD ($) for 951613.39527579 MNT (₮) at rate 3450.500001
-2025-12-17 14:29:36.876 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:29:36.876 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:29:36.877 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 241.46 EUR (€) for 912899.89500000 MNT (₮) at rate 3780.750000
-2025-12-17 14:29:36.995 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:29:36.995 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:29:36.996 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 179564.73 MNT (₮) for 412.99887900 USD ($) at rate 0.002300
-2025-12-17 14:29:37.036 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:29:37.037 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:29:37.037 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 628.24 USD ($) for 2167742.12062824 MNT (₮) at rate 3450.500001
-2025-12-17 14:29:37.123 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:29:37.124 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:29:37.125 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 130.14 EUR (€) for 143.01097614 USD ($) at rate 1.098901
-2025-12-17 14:29:37.167 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:29:37.168 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:29:37.168 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 270.29 EUR (€) for 1021898.91750000 MNT (₮) at rate 3780.750000
-2025-12-17 14:29:37.348 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:29:37.349 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:29:37.349 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 211.94 EUR (€) for 232.90107794 USD ($) at rate 1.098901
-2025-12-17 14:29:37.543 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:29:37.543 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:29:37.543 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 81.38 EUR (€) for 307677.43500000 MNT (₮) at rate 3780.750000
-2025-12-17 14:29:37.731 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:29:37.731 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:29:37.732 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 281.59 EUR (€) for 309.43953259 USD ($) at rate 1.098901
-2025-12-17 14:29:37.874 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:29:37.874 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:29:37.875 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 222.08 EUR (€) for 839628.96000000 MNT (₮) at rate 3780.750000
-2025-12-17 14:29:37.959 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:29:37.959 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:29:37.960 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 352319.63 MNT (₮) for 873.75268240 USD ($) at rate 0.002480
-2025-12-17 14:29:37.980 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:29:37.980 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:29:37.980 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 158.18 USD ($) for 143.94380000 EUR (€) at rate 0.910000
-2025-12-17 14:29:38.264 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:29:38.265 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:29:38.265 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 437.93 USD ($) for 398.51630000 EUR (€) at rate 0.910000
-2025-12-17 14:29:38.302 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:29:38.302 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:29:38.303 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 69253.95 MNT (₮) for 196.12718640 USD ($) at rate 0.002832
-2025-12-17 14:29:38.351 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:29:38.351 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:29:38.352 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 144.05 USD ($) for 497044.52528810 MNT (₮) at rate 3450.500002
-2025-12-17 14:29:38.572 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:29:38.573 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:29:38.573 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 150.06 USD ($) for 517782.03030012 MNT (₮) at rate 3450.500002
-2025-12-17 14:29:38.596 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:29:38.596 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:29:38.597 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 123.04 EUR (€) for 465183.48000000 MNT (₮) at rate 3780.750000
-2025-12-17 14:29:38.726 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:29:38.726 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:29:38.727 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 149.38 EUR (€) for 164.15383138 USD ($) at rate 1.098901
-2025-12-17 14:29:38.947 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:29:38.947 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:29:38.948 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 79263.03 MNT (₮) for 229.94205003 USD ($) at rate 0.002901
-2025-12-17 14:29:39.180 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:29:39.180 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:29:39.181 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 269532.67 MNT (₮) for 123.17643019 EUR (€) at rate 0.000457
-2025-12-17 14:29:39.220 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:29:39.220 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:29:39.221 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 998500.86 MNT (₮) for 2975.53256280 USD ($) at rate 0.002980
-2025-12-17 14:29:39.225 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:29:39.225 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:29:39.225 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 248.40 EUR (€) for 939138.30000000 MNT (₮) at rate 3780.750000
-2025-12-17 14:29:39.359 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:29:39.359 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:29:39.360 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 228.57 EUR (€) for 864166.02750000 MNT (₮) at rate 3780.750000
-2025-12-17 14:29:39.408 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:29:39.408 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:29:39.409 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 243.32 EUR (€) for 267.38459132 USD ($) at rate 1.098901
-2025-12-17 14:29:39.772 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:29:39.772 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:29:39.773 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 487970.16 MNT (₮) for 354.75430632 EUR (€) at rate 0.000727
-2025-12-17 14:29:39.896 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:29:39.896 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:29:39.897 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 110.39 EUR (€) for 121.30768139 USD ($) at rate 1.098901
-2025-12-17 14:29:40.014 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:29:40.014 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:29:40.015 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 655314.61 MNT (₮) for 796.20725115 EUR (€) at rate 0.001215
-2025-12-17 14:29:40.211 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:29:40.211 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:29:40.212 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 527506.87 MNT (₮) for 2098.94983573 USD ($) at rate 0.003979
-2025-12-17 14:29:40.304 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:29:40.304 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:29:40.305 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 222515.94 MNT (₮) for 1002.87934158 USD ($) at rate 0.004507
-2025-12-17 14:29:40.347 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:29:40.347 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:29:40.347 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 329671.59 MNT (₮) for 616.48587330 EUR (€) at rate 0.001870
-2025-12-17 14:29:40.361 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:29:40.361 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:29:40.362 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 181.02 EUR (€) for 198.92305902 USD ($) at rate 1.098901
-2025-12-17 14:29:40.427 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:29:40.427 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:29:40.427 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 133.43 USD ($) for 121.42130000 EUR (€) at rate 0.910000
-2025-12-17 14:29:40.766 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:29:40.767 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:29:40.768 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 321753.26 MNT (₮) for 707.85717200 EUR (€) at rate 0.002200
-2025-12-17 14:29:40.799 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:29:40.800 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:29:40.800 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 186.55 USD ($) for 643690.77537310 MNT (₮) at rate 3450.500002
-2025-12-17 14:29:40.855 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:29:40.856 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:29:40.857 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 486.86 EUR (€) for 535.01094086 USD ($) at rate 1.098901
-2025-12-17 14:29:40.975 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:29:40.975 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:29:40.976 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 316.34 EUR (€) for 347.62634234 USD ($) at rate 1.098901
-2025-12-17 14:29:41.432 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:29:41.433 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:29:41.433 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 559202.79 MNT (₮) for 1410.30943638 EUR (€) at rate 0.002522
-2025-12-17 14:29:41.513 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:29:41.513 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:29:41.513 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 146.18 EUR (€) for 552670.03500000 MNT (₮) at rate 3780.750000
-2025-12-17 14:29:41.719 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:29:41.719 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:29:41.719 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 286.88 USD ($) for 261.06080000 EUR (€) at rate 0.910000
-2025-12-17 14:29:41.724 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:29:41.724 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:29:41.725 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 498472.06 MNT (₮) for 1535.79241686 EUR (€) at rate 0.003081
-2025-12-17 14:29:41.800 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:29:41.801 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:29:41.802 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 270.74 USD ($) for 246.37340000 EUR (€) at rate 0.910000
-2025-12-17 14:29:41.803 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:29:41.803 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:29:41.804 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 1077669.75 MNT (₮) for 3856.98003525 EUR (€) at rate 0.003579
-2025-12-17 14:29:42.202 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:29:42.202 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:29:42.203 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 761156.48 MNT (₮) for 3544.70572736 EUR (€) at rate 0.004657
-2025-12-17 14:29:42.237 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:29:42.237 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:29:42.238 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 433.98 EUR (€) for 476.90105598 USD ($) at rate 1.098901
-2025-12-17 14:29:42.300 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:29:42.301 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:29:42.301 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 1422.41 USD ($) for 4908025.70784482 MNT (₮) at rate 3450.500002
-2025-12-17 14:29:42.635 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:29:42.636 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:29:42.636 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 164.64 USD ($) for 149.82240000 EUR (€) at rate 0.910000
-2025-12-17 14:29:42.754 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:29:42.755 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:29:42.755 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 239.99 EUR (€) for 263.72525099 USD ($) at rate 1.098901
-2025-12-17 14:29:42.805 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:29:42.805 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:29:42.806 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 619106.92 MNT (₮) for 3354.32129256 EUR (€) at rate 0.005418
-2025-12-17 14:29:42.966 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:29:42.967 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:29:42.968 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 1470915.26 MNT (₮) for 6957.42917980 USD ($) at rate 0.004730
-2025-12-17 14:29:42.992 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:29:42.993 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:29:42.994 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 529939.01 MNT (₮) for 3199.24180337 EUR (€) at rate 0.006037
-2025-12-17 14:29:43.173 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:29:43.173 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:29:43.173 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 403.17 EUR (€) for 1524284.97750000 MNT (₮) at rate 3780.750000
-2025-12-17 14:29:43.299 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:29:43.299 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:29:43.300 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 287934.52 MNT (₮) for 1785.48195852 USD ($) at rate 0.006201
-2025-12-17 14:29:43.339 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:29:43.339 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:29:43.340 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 785.69 USD ($) for 714.97790000 EUR (€) at rate 0.910000
-2025-12-17 14:29:43.373 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:29:43.374 [Participant-8] INFO  com.exchange.thread.ParticipantThread - Participant Bayarmaa Enkhbat completed: 10 successful, 0 rejected
-2025-12-17 14:29:43.632 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:29:43.632 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:29:43.632 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 352.90 USD ($) for 1217681.45105870 MNT (₮) at rate 3450.500003
-2025-12-17 14:29:43.917 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:29:43.918 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:29:43.919 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 1923.70 EUR (€) for 7273028.77500000 MNT (₮) at rate 3780.750000
-2025-12-17 14:29:44.037 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:29:44.039 [Participant-2] INFO  com.exchange.thread.ParticipantThread - Participant Tsetsegmaa Ganbold completed: 10 successful, 0 rejected
-2025-12-17 14:29:44.085 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:29:44.085 [Participant-7] INFO  com.exchange.thread.ParticipantThread - Participant Sarangerel Boldbaatar completed: 10 successful, 0 rejected
-2025-12-17 14:29:44.093 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:29:44.093 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:29:44.093 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 434.11 USD ($) for 395.04053411 EUR (€) at rate 0.910001
-2025-12-17 14:29:44.262 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:29:44.263 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:29:44.263 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 695165.64 MNT (₮) for 4510.92983796 USD ($) at rate 0.006489
-2025-12-17 14:29:44.270 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:29:44.270 [Participant-3] INFO  com.exchange.thread.ParticipantThread - Participant Enkhjargal Munkhbat completed: 10 successful, 0 rejected
-2025-12-17 14:29:44.484 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:29:44.484 [Participant-6] INFO  com.exchange.thread.ParticipantThread - Participant Ganzorig Tumur completed: 10 successful, 0 rejected
-2025-12-17 14:29:44.765 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:29:44.766 [Participant-1] INFO  com.exchange.thread.ParticipantThread - Participant Batbayar Erdene completed: 10 successful, 0 rejected
-2025-12-17 14:29:44.767 [main] INFO  com.exchange.Main - Participant Batbayar Erdene completed: 10 successful, 0 rejected
-2025-12-17 14:29:44.767 [main] INFO  com.exchange.Main - Participant Tsetsegmaa Ganbold completed: 10 successful, 0 rejected
-2025-12-17 14:29:44.767 [main] INFO  com.exchange.Main - Participant Enkhjargal Munkhbat completed: 10 successful, 0 rejected
-2025-12-17 14:29:44.846 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:29:44.847 [Participant-5] INFO  com.exchange.thread.ParticipantThread - Participant Altantsetseg Dorjsuren completed: 10 successful, 0 rejected
-2025-12-17 14:29:45.049 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:29:45.050 [Participant-4] INFO  com.exchange.thread.ParticipantThread - Participant Oyunerdene Tserendorj completed: 10 successful, 0 rejected
-2025-12-17 14:29:45.050 [main] INFO  com.exchange.Main - Participant Oyunerdene Tserendorj completed: 10 successful, 0 rejected
-2025-12-17 14:29:45.051 [main] INFO  com.exchange.Main - Participant Altantsetseg Dorjsuren completed: 10 successful, 0 rejected
-2025-12-17 14:29:45.051 [main] INFO  com.exchange.Main - Participant Ganzorig Tumur completed: 10 successful, 0 rejected
-2025-12-17 14:29:45.051 [main] INFO  com.exchange.Main - Participant Sarangerel Boldbaatar completed: 10 successful, 0 rejected
-2025-12-17 14:29:45.051 [main] INFO  com.exchange.Main - Participant Bayarmaa Enkhbat completed: 10 successful, 0 rejected
-2025-12-17 14:29:47.053 [main] INFO  com.exchange.thread.BalanceReporter - Balance Reporter stop requested
-2025-12-17 14:43:03.825 [main] INFO  com.exchange.Main - Currency Exchange Application Starting...
-2025-12-17 14:43:03.840 [main] INFO  com.exchange.util.DataReader - Loaded participant: Batbayar Erdene
-2025-12-17 14:43:03.841 [main] INFO  com.exchange.util.DataReader - Loaded participant: Tsetsegmaa Ganbold
-2025-12-17 14:43:03.841 [main] INFO  com.exchange.util.DataReader - Loaded participant: Enkhjargal Munkhbat
-2025-12-17 14:43:03.841 [main] INFO  com.exchange.util.DataReader - Loaded participant: Oyunerdene Tserendorj
-2025-12-17 14:43:03.841 [main] INFO  com.exchange.util.DataReader - Loaded participant: Altantsetseg Dorjsuren
-2025-12-17 14:43:03.841 [main] INFO  com.exchange.util.DataReader - Loaded participant: Ganzorig Tumur
-2025-12-17 14:43:03.842 [main] INFO  com.exchange.util.DataReader - Loaded participant: Sarangerel Boldbaatar
-2025-12-17 14:43:03.842 [main] INFO  com.exchange.util.DataReader - Loaded participant: Bayarmaa Enkhbat
-2025-12-17 14:43:03.842 [main] INFO  com.exchange.util.DataReader - Total 8 participants loaded from data/participants.txt
-2025-12-17 14:43:03.844 [main] INFO  com.exchange.service.Exchange - Exchange initialized with default rates
-2025-12-17 14:43:03.844 [main] INFO  com.exchange.service.Exchange - Participant registered: Batbayar Erdene
-2025-12-17 14:43:03.844 [main] INFO  com.exchange.service.Exchange - Participant registered: Tsetsegmaa Ganbold
-2025-12-17 14:43:03.844 [main] INFO  com.exchange.service.Exchange - Participant registered: Enkhjargal Munkhbat
-2025-12-17 14:43:03.844 [main] INFO  com.exchange.service.Exchange - Participant registered: Oyunerdene Tserendorj
-2025-12-17 14:43:03.845 [main] INFO  com.exchange.service.Exchange - Participant registered: Altantsetseg Dorjsuren
-2025-12-17 14:43:03.845 [main] INFO  com.exchange.service.Exchange - Participant registered: Ganzorig Tumur
-2025-12-17 14:43:03.845 [main] INFO  com.exchange.service.Exchange - Participant registered: Sarangerel Boldbaatar
-2025-12-17 14:43:03.845 [main] INFO  com.exchange.service.Exchange - Participant registered: Bayarmaa Enkhbat
-2025-12-17 14:43:03.846 [main] INFO  com.exchange.Main - Starting trading with 8 participants, 10 transactions each
-2025-12-17 14:43:03.846 [BalanceReporter] INFO  com.exchange.thread.BalanceReporter - Balance Reporter started, reporting every 3000 ms
-2025-12-17 14:43:03.849 [Participant-4] INFO  com.exchange.thread.ParticipantThread - Participant Oyunerdene Tserendorj started trading
-2025-12-17 14:43:03.848 [Participant-1] INFO  com.exchange.thread.ParticipantThread - Participant Batbayar Erdene started trading
-2025-12-17 14:43:03.849 [Participant-3] INFO  com.exchange.thread.ParticipantThread - Participant Enkhjargal Munkhbat started trading
-2025-12-17 14:43:03.850 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:43:03.849 [Participant-5] INFO  com.exchange.thread.ParticipantThread - Participant Altantsetseg Dorjsuren started trading
-2025-12-17 14:43:03.848 [Participant-2] INFO  com.exchange.thread.ParticipantThread - Participant Tsetsegmaa Ganbold started trading
-2025-12-17 14:43:03.850 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:43:03.850 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:43:03.849 [Participant-6] INFO  com.exchange.thread.ParticipantThread - Participant Ganzorig Tumur started trading
-2025-12-17 14:43:03.850 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:43:03.850 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:43:03.850 [main] INFO  com.exchange.Main - All participant threads submitted. Waiting for completion...
-2025-12-17 14:43:03.850 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:43:03.850 [Participant-8] INFO  com.exchange.thread.ParticipantThread - Participant Bayarmaa Enkhbat started trading
-2025-12-17 14:43:03.851 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:43:03.850 [Participant-7] INFO  com.exchange.thread.ParticipantThread - Participant Sarangerel Boldbaatar started trading
-2025-12-17 14:43:03.852 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:43:03.856 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 191.74 USD ($) for 174.4834 EUR (€) at rate 0.91
-2025-12-17 14:43:03.856 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 309.65 USD ($) for 1068447.3250 MNT (₮) at rate 3450.50
-2025-12-17 14:43:03.856 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 211.84 EUR (€) for 800914.0800 MNT (₮) at rate 3780.75
-2025-12-17 14:43:03.857 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 278262.83 MNT (₮) for 73.46138712 EUR (€) at rate 0.000264
-2025-12-17 14:43:03.856 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 143230.38 MNT (₮) for 41.53681020 USD ($) at rate 0.000290
-2025-12-17 14:43:03.857 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 289.06 USD ($) for 997401.53000000 MNT (₮) at rate 3450.500000
-2025-12-17 14:43:03.857 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 298.52 EUR (€) for 328.04392652 USD ($) at rate 1.098901
-2025-12-17 14:43:03.857 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 145.15 EUR (€) for 159.50548015 USD ($) at rate 1.098901
-2025-12-17 14:43:04.384 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:43:04.384 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:43:04.385 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 170281.36 MNT (₮) for 73.73182888 USD ($) at rate 0.000433
-2025-12-17 14:43:04.398 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:43:04.398 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:43:04.399 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 209.60 EUR (€) for 792445.20000000 MNT (₮) at rate 3780.750000
-2025-12-17 14:43:04.437 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:43:04.437 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:43:04.438 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 217529.54 MNT (₮) for 131.17031262 USD ($) at rate 0.000603
-2025-12-17 14:43:04.736 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:43:04.736 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:43:04.737 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 353.13 EUR (€) for 1335096.24750000 MNT (₮) at rate 3780.750000
-2025-12-17 14:43:05.010 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:43:05.010 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:43:05.011 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 664.22 USD ($) for 2291891.11000000 MNT (₮) at rate 3450.500000
-2025-12-17 14:43:05.050 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:43:05.051 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:43:05.052 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 532333.60 MNT (₮) for 437.04588560 USD ($) at rate 0.000821
-2025-12-17 14:43:05.133 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:43:05.133 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:43:05.134 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 72.56 EUR (€) for 274331.22000000 MNT (₮) at rate 3780.750000
-2025-12-17 14:43:05.196 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:43:05.197 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:43:05.197 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 472.47 USD ($) for 429.94770000 EUR (€) at rate 0.910000
-2025-12-17 14:43:05.226 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:43:05.226 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:43:05.227 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 140.00 EUR (€) for 529305.00000000 MNT (₮) at rate 3780.750000
-2025-12-17 14:43:05.289 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:43:05.290 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:43:05.290 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 468.76 EUR (€) for 1772264.37000000 MNT (₮) at rate 3780.750000
-2025-12-17 14:43:05.358 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:43:05.359 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:43:05.361 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 172.14 EUR (€) for 189.16481814 USD ($) at rate 1.098901
-2025-12-17 14:43:05.655 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:43:05.656 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:43:05.657 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 271.70 EUR (€) for 1027229.77500000 MNT (₮) at rate 3780.750000
-2025-12-17 14:43:05.661 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:43:05.662 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:43:05.664 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 355.23 EUR (€) for 1343035.82250000 MNT (₮) at rate 3780.750000
-2025-12-17 14:43:05.847 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:43:05.848 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:43:05.849 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 110.28 EUR (€) for 121.18680228 USD ($) at rate 1.098901
-2025-12-17 14:43:05.989 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:43:05.989 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:43:05.989 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 788070.73 MNT (₮) for 1066.25969769 USD ($) at rate 0.001353
-2025-12-17 14:43:06.435 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:43:06.436 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:43:06.436 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 290.74 USD ($) for 1003198.37029074 MNT (₮) at rate 3450.500001
-2025-12-17 14:43:06.535 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:43:06.535 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:43:06.536 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 282.91 USD ($) for 257.44810000 EUR (€) at rate 0.910000
-2025-12-17 14:43:06.549 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:43:06.550 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:43:06.551 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 322026.28 MNT (₮) for 174.53824376 EUR (€) at rate 0.000542
-2025-12-17 14:43:06.696 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:43:06.696 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:43:06.697 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 310.21 USD ($) for 1070379.60531021 MNT (₮) at rate 3450.500001
-2025-12-17 14:43:06.956 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:43:06.957 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:43:06.957 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 288903.48 MNT (₮) for 618.54235068 USD ($) at rate 0.002141
-2025-12-17 14:43:06.970 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:43:06.970 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:43:06.971 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 462660.00 MNT (₮) for 399.73824000 EUR (€) at rate 0.000864
-2025-12-17 14:43:07.007 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:43:07.007 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:43:07.007 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 283.75 USD ($) for 979079.37528375 MNT (₮) at rate 3450.500001
-2025-12-17 14:43:07.301 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:43:07.302 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:43:07.303 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 53.07 EUR (€) for 58.31867607 USD ($) at rate 1.098901
-2025-12-17 14:43:07.477 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:43:07.478 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:43:07.479 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 1077464.05 MNT (₮) for 2618.23764150 USD ($) at rate 0.002430
-2025-12-17 14:43:07.787 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:43:07.788 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:43:07.789 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 97.95 USD ($) for 337976.47509795 MNT (₮) at rate 3450.500001
-2025-12-17 14:43:07.887 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:43:07.887 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:43:07.888 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 680258.09 MNT (₮) for 902.70248543 EUR (€) at rate 0.001327
-2025-12-17 14:43:07.986 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:43:07.987 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:43:07.989 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 62.02 USD ($) for 56.43820000 EUR (€) at rate 0.910000
-2025-12-17 14:43:08.028 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:43:08.029 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:43:08.029 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 702758.77 MNT (₮) for 1410.43685139 EUR (€) at rate 0.002007
-2025-12-17 14:43:08.133 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:43:08.133 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:43:08.134 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 795223.15 MNT (₮) for 2788.84758705 USD ($) at rate 0.003507
-2025-12-17 14:43:08.204 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:43:08.205 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:43:08.206 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 302.48 USD ($) for 1043707.24030248 MNT (₮) at rate 3450.500001
-2025-12-17 14:43:08.364 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:43:08.365 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:43:08.366 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 230.91 EUR (€) for 873012.98250000 MNT (₮) at rate 3780.750000
-2025-12-17 14:43:08.403 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:43:08.404 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:43:08.405 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 190.57 USD ($) for 657561.78519057 MNT (₮) at rate 3450.500001
-2025-12-17 14:43:08.431 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:43:08.432 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:43:08.432 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 698.72 USD ($) for 2410933.36069872 MNT (₮) at rate 3450.500001
-2025-12-17 14:43:08.639 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:43:08.639 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:43:08.640 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 180234.81 MNT (₮) for 488.43633510 EUR (€) at rate 0.002710
-2025-12-17 14:43:08.903 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:43:08.904 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:43:08.905 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 1328.55 USD ($) for 4584161.77765710 MNT (₮) at rate 3450.500002
-2025-12-17 14:43:09.106 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:43:09.107 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:43:09.108 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 139.82 USD ($) for 127.23620000 EUR (€) at rate 0.910000
-2025-12-17 14:43:09.185 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:43:09.186 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:43:09.187 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 50.37 USD ($) for 173801.68515111 MNT (₮) at rate 3450.500003
-2025-12-17 14:43:09.271 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:43:09.271 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:43:09.272 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 957900.52 MNT (₮) for 2768.33250280 EUR (€) at rate 0.002890
-2025-12-17 14:43:09.317 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:43:09.318 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:43:09.319 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 418.36 EUR (€) for 459.73622236 USD ($) at rate 1.098901
-2025-12-17 14:43:09.706 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:43:09.707 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:43:09.708 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 340.96 EUR (€) for 374.68128496 USD ($) at rate 1.098901
-2025-12-17 14:43:09.741 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:43:09.741 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:43:09.742 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 30.13 EUR (€) for 113913.99750000 MNT (₮) at rate 3780.750000
-2025-12-17 14:43:09.791 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:43:09.791 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:43:09.792 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 90.74 EUR (€) for 99.71427674 USD ($) at rate 1.098901
-2025-12-17 14:43:09.794 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:43:09.794 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:43:09.795 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 127.63 USD ($) for 440387.31538289 MNT (₮) at rate 3450.500003
-2025-12-17 14:43:10.136 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:43:10.136 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:43:10.137 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 260690.40 MNT (₮) for 1121.49010080 USD ($) at rate 0.004302
-2025-12-17 14:43:10.329 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:43:10.330 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:43:10.331 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 492401.16 MNT (₮) for 1894.75966368 EUR (€) at rate 0.003848
-2025-12-17 14:43:10.570 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:43:10.571 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:43:10.572 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 970095.07 MNT (₮) for 4210.21260380 EUR (€) at rate 0.004340
-2025-12-17 14:43:10.585 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:43:10.586 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:43:10.587 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 243.60 USD ($) for 840541.80073080 MNT (₮) at rate 3450.500003
-2025-12-17 14:43:10.644 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:43:10.645 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:43:10.646 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 733.20 USD ($) for 667.21200000 EUR (€) at rate 0.910000
-2025-12-17 14:43:10.657 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:43:10.657 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:43:10.658 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 347684.34 MNT (₮) for 1586.48364342 USD ($) at rate 0.004563
-2025-12-17 14:43:10.792 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:43:10.793 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:43:10.794 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 106.62 USD ($) for 97.02430662 EUR (€) at rate 0.910001
-2025-12-17 14:43:10.815 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:43:10.815 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:43:10.816 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 382.42 EUR (€) for 1445834.41500000 MNT (₮) at rate 3780.750000
-2025-12-17 14:43:11.002 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:43:11.003 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:43:11.004 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 349010.28 MNT (₮) for 1713.98948508 USD ($) at rate 0.004911
-2025-12-17 14:43:11.217 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:43:11.218 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:43:11.219 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 684.64 EUR (€) for 752.35158064 USD ($) at rate 1.098901
-2025-12-17 14:43:11.259 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:43:11.260 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:43:11.261 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 933410.86 MNT (₮) for 4956.41166660 EUR (€) at rate 0.005310
-2025-12-17 14:43:11.306 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:43:11.307 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:43:11.308 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 1160.22 USD ($) for 4003339.11348066 MNT (₮) at rate 3450.500003
-2025-12-17 14:43:11.656 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:43:11.657 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:43:11.658 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 759939.94 MNT (₮) for 4744.30504542 EUR (€) at rate 0.006243
-2025-12-17 14:43:11.720 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:43:11.720 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:43:11.721 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 461329.84 MNT (₮) for 2426.59495840 USD ($) at rate 0.005260
-2025-12-17 14:43:11.849 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:43:11.849 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:43:11.850 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 663310.08 MNT (₮) for 4645.16049024 EUR (€) at rate 0.007003
-2025-12-17 14:43:11.902 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:43:11.903 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:43:11.904 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 1370030.66 MNT (₮) for 10502.65503956 EUR (€) at rate 0.007666
-2025-12-17 14:43:11.906 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:43:11.907 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:43:11.907 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 658.87 USD ($) for 2273430.93763548 MNT (₮) at rate 3450.500004
-2025-12-17 14:43:12.175 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:43:12.175 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:43:12.176 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 1012.66 EUR (€) for 3828614.29500000 MNT (₮) at rate 3780.750000
-2025-12-17 14:43:12.246 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:43:12.247 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:43:12.248 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 538.45 EUR (€) for 591.70378190 USD ($) at rate 1.098902
-2025-12-17 14:43:12.496 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:43:12.497 [Participant-2] INFO  com.exchange.thread.ParticipantThread - Participant Tsetsegmaa Ganbold completed: 10 successful, 0 rejected
-2025-12-17 14:43:12.499 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:43:12.499 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:43:12.499 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 210.97 EUR (€) for 797624.82771097 MNT (₮) at rate 3780.750001
-2025-12-17 14:43:12.671 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:43:12.672 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:43:12.673 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 2089.14 EUR (€) for 2295.76221342 USD ($) at rate 1.098903
-2025-12-17 14:43:12.839 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:43:12.839 [Participant-5] INFO  com.exchange.thread.ParticipantThread - Participant Altantsetseg Dorjsuren completed: 10 successful, 0 rejected
-2025-12-17 14:43:12.997 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:43:12.998 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:43:12.998 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 103867.42 MNT (₮) for 938.54600712 EUR (€) at rate 0.009036
-2025-12-17 14:43:13.009 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:43:13.009 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:43:13.010 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 1097555.05 MNT (₮) for 6279.11244105 USD ($) at rate 0.005721
-2025-12-17 14:43:13.083 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:43:13.083 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:43:13.084 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 696.39 EUR (€) for 765.26645295 USD ($) at rate 1.098905
-2025-12-17 14:43:13.381 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:43:13.382 [Participant-7] INFO  com.exchange.thread.ParticipantThread - Participant Sarangerel Boldbaatar completed: 10 successful, 0 rejected
-2025-12-17 14:43:13.819 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:43:13.820 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:43:13.821 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 1570497.60 MNT (₮) for 14354.34806400 EUR (€) at rate 0.009140
-2025-12-17 14:43:13.922 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:43:13.923 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:43:13.924 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 470.56 USD ($) for 428.21007056 EUR (€) at rate 0.910001
-2025-12-17 14:43:13.943 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:43:13.943 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:43:13.944 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 146.85 EUR (€) for 161.37434610 USD ($) at rate 1.098906
-2025-12-17 14:43:13.946 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:43:13.947 [Participant-3] INFO  com.exchange.thread.ParticipantThread - Participant Enkhjargal Munkhbat completed: 10 successful, 0 rejected
-2025-12-17 14:43:14.146 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:43:14.147 [Participant-1] INFO  com.exchange.thread.ParticipantThread - Participant Batbayar Erdene completed: 10 successful, 0 rejected
-2025-12-17 14:43:14.147 [main] INFO  com.exchange.Main - Participant Batbayar Erdene completed: 10 successful, 0 rejected
-2025-12-17 14:43:14.147 [main] INFO  com.exchange.Main - Participant Tsetsegmaa Ganbold completed: 10 successful, 0 rejected
-2025-12-17 14:43:14.147 [main] INFO  com.exchange.Main - Participant Enkhjargal Munkhbat completed: 10 successful, 0 rejected
-2025-12-17 14:43:14.541 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:43:14.541 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:43:14.542 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 1667.14 USD ($) for 1517.09906714 EUR (€) at rate 0.910001
-2025-12-17 14:43:14.822 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:43:14.822 [Participant-4] INFO  com.exchange.thread.ParticipantThread - Participant Oyunerdene Tserendorj completed: 10 successful, 0 rejected
-2025-12-17 14:43:14.823 [main] INFO  com.exchange.Main - Participant Oyunerdene Tserendorj completed: 10 successful, 0 rejected
-2025-12-17 14:43:14.823 [main] INFO  com.exchange.Main - Participant Altantsetseg Dorjsuren completed: 10 successful, 0 rejected
-2025-12-17 14:43:15.348 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:43:15.349 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:43:15.349 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 133.05 USD ($) for 121.07589915 EUR (€) at rate 0.910003
-2025-12-17 14:43:15.997 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:43:15.998 [Participant-8] INFO  com.exchange.thread.ParticipantThread - Participant Bayarmaa Enkhbat completed: 10 successful, 0 rejected
-2025-12-17 14:43:16.311 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:43:16.311 [Participant-6] INFO  com.exchange.thread.ParticipantThread - Participant Ganzorig Tumur completed: 10 successful, 0 rejected
-2025-12-17 14:43:16.312 [main] INFO  com.exchange.Main - Participant Ganzorig Tumur completed: 10 successful, 0 rejected
-2025-12-17 14:43:16.312 [main] INFO  com.exchange.Main - Participant Sarangerel Boldbaatar completed: 10 successful, 0 rejected
-2025-12-17 14:43:16.312 [main] INFO  com.exchange.Main - Participant Bayarmaa Enkhbat completed: 10 successful, 0 rejected
-2025-12-17 14:43:18.315 [main] INFO  com.exchange.thread.BalanceReporter - Balance Reporter stop requested
-2025-12-17 14:43:18.880 [BalanceReporter] INFO  com.exchange.thread.BalanceReporter - Balance Reporter stopped
-2025-12-17 14:43:18.881 [main] INFO  com.exchange.Main - ════════════════════════════════════════════════════════════════════════════════
-2025-12-17 14:43:18.881 [main] INFO  com.exchange.Main - FINAL SUMMARY
-2025-12-17 14:43:18.882 [main] INFO  com.exchange.Main - ════════════════════════════════════════════════════════════════════════════════
-2025-12-17 14:43:18.882 [main] INFO  com.exchange.Main - Total transactions executed: 80
-2025-12-17 14:43:18.882 [main] INFO  com.exchange.Main - Application completed successfully
-2025-12-17 14:44:01.886 [main] INFO  com.exchange.Main - Currency Exchange Application Starting...
-2025-12-17 14:44:01.909 [main] INFO  com.exchange.util.DataReader - Loaded participant: Batbayar Erdene
-2025-12-17 14:44:01.910 [main] INFO  com.exchange.util.DataReader - Loaded participant: Tsetsegmaa Ganbold
-2025-12-17 14:44:01.910 [main] INFO  com.exchange.util.DataReader - Loaded participant: Enkhjargal Munkhbat
-2025-12-17 14:44:01.911 [main] INFO  com.exchange.util.DataReader - Loaded participant: Oyunerdene Tserendorj
-2025-12-17 14:44:01.911 [main] INFO  com.exchange.util.DataReader - Loaded participant: Altantsetseg Dorjsuren
-2025-12-17 14:44:01.911 [main] INFO  com.exchange.util.DataReader - Loaded participant: Ganzorig Tumur
-2025-12-17 14:44:01.912 [main] INFO  com.exchange.util.DataReader - Loaded participant: Sarangerel Boldbaatar
-2025-12-17 14:44:01.912 [main] INFO  com.exchange.util.DataReader - Loaded participant: Bayarmaa Enkhbat
-2025-12-17 14:44:01.912 [main] INFO  com.exchange.util.DataReader - Total 8 participants loaded from data/participants.txt
-2025-12-17 14:44:01.915 [main] INFO  com.exchange.service.Exchange - Exchange initialized with default rates
-2025-12-17 14:44:01.915 [main] INFO  com.exchange.service.Exchange - Participant registered: Batbayar Erdene
-2025-12-17 14:44:01.915 [main] INFO  com.exchange.service.Exchange - Participant registered: Tsetsegmaa Ganbold
-2025-12-17 14:44:01.916 [main] INFO  com.exchange.service.Exchange - Participant registered: Enkhjargal Munkhbat
-2025-12-17 14:44:01.916 [main] INFO  com.exchange.service.Exchange - Participant registered: Oyunerdene Tserendorj
-2025-12-17 14:44:01.916 [main] INFO  com.exchange.service.Exchange - Participant registered: Altantsetseg Dorjsuren
-2025-12-17 14:44:01.916 [main] INFO  com.exchange.service.Exchange - Participant registered: Ganzorig Tumur
-2025-12-17 14:44:01.916 [main] INFO  com.exchange.service.Exchange - Participant registered: Sarangerel Boldbaatar
-2025-12-17 14:44:01.917 [main] INFO  com.exchange.service.Exchange - Participant registered: Bayarmaa Enkhbat
-2025-12-17 14:44:01.918 [main] INFO  com.exchange.Main - Starting trading with 8 participants, 10 transactions each
-2025-12-17 14:44:01.918 [BalanceReporter] INFO  com.exchange.thread.BalanceReporter - Balance Reporter started, reporting every 3000 ms
-2025-12-17 14:44:01.921 [Participant-2] INFO  com.exchange.thread.ParticipantThread - Participant Tsetsegmaa Ganbold started trading
-2025-12-17 14:44:01.921 [Participant-3] INFO  com.exchange.thread.ParticipantThread - Participant Enkhjargal Munkhbat started trading
-2025-12-17 14:44:01.921 [Participant-1] INFO  com.exchange.thread.ParticipantThread - Participant Batbayar Erdene started trading
-2025-12-17 14:44:01.921 [Participant-4] INFO  com.exchange.thread.ParticipantThread - Participant Oyunerdene Tserendorj started trading
-2025-12-17 14:44:01.922 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:44:01.922 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:44:01.923 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:44:01.923 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:44:01.922 [Participant-5] INFO  com.exchange.thread.ParticipantThread - Participant Altantsetseg Dorjsuren started trading
-2025-12-17 14:44:01.923 [Participant-7] INFO  com.exchange.thread.ParticipantThread - Participant Sarangerel Boldbaatar started trading
-2025-12-17 14:44:01.923 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:44:01.922 [Participant-6] INFO  com.exchange.thread.ParticipantThread - Participant Ganzorig Tumur started trading
-2025-12-17 14:44:01.923 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:44:01.924 [main] INFO  com.exchange.Main - All participant threads submitted. Waiting for completion...
-2025-12-17 14:44:01.924 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:44:01.924 [Participant-8] INFO  com.exchange.thread.ParticipantThread - Participant Bayarmaa Enkhbat started trading
-2025-12-17 14:44:01.925 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:44:01.928 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 247.98 EUR (€) for 937550.3850 MNT (₮) at rate 3780.75
-2025-12-17 14:44:01.928 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 75931.12 MNT (₮) for 23.84237168 EUR (€) at rate 0.000314
-2025-12-17 14:44:01.928 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 140.78 EUR (€) for 154.70328278 USD ($) at rate 1.098901
-2025-12-17 14:44:01.928 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 188.01 EUR (€) for 206.60437701 USD ($) at rate 1.098901
-2025-12-17 14:44:01.928 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 49915.22 MNT (₮) for 13.17761808 EUR (€) at rate 0.000264
-2025-12-17 14:44:01.929 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 253.18 EUR (€) for 957210.28500000 MNT (₮) at rate 3780.750000
-2025-12-17 14:44:01.929 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 237326.84 MNT (₮) for 68.82478360 USD ($) at rate 0.000290
-2025-12-17 14:44:01.929 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 155611.16 MNT (₮) for 45.12723640 USD ($) at rate 0.000290
-2025-12-17 14:44:02.666 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:44:02.667 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:44:02.668 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:44:02.668 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 387.54 USD ($) for 352.6614 EUR (€) at rate 0.91
-2025-12-17 14:44:02.668 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:44:02.669 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 366.90 USD ($) for 1265988.4500 MNT (₮) at rate 3450.50
-2025-12-17 14:44:02.857 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:44:02.858 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:44:02.860 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 387.81 USD ($) for 1338138.40500000 MNT (₮) at rate 3450.500000
-2025-12-17 14:44:02.987 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:44:02.988 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:44:02.989 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 605327.82 MNT (₮) for 236.07784980 EUR (€) at rate 0.000390
-2025-12-17 14:44:03.135 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:44:03.136 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:44:03.137 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 256.54 USD ($) for 233.45140000 EUR (€) at rate 0.910000
-2025-12-17 14:44:03.190 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:44:03.191 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:44:03.193 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 227.10 EUR (€) for 249.56041710 USD ($) at rate 1.098901
-2025-12-17 14:44:03.197 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:44:03.198 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:44:03.199 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 581122.63 MNT (₮) for 396.90675629 USD ($) at rate 0.000683
-2025-12-17 14:44:03.234 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:44:03.235 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:44:03.237 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 794.98 USD ($) for 723.43180000 EUR (€) at rate 0.910000
-2025-12-17 14:44:03.406 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:44:03.407 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:44:03.408 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 30352.93 MNT (₮) for 30.20116535 EUR (€) at rate 0.000995
-2025-12-17 14:44:03.420 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:44:03.421 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:44:03.423 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 313.27 EUR (€) for 344.25271627 USD ($) at rate 1.098901
-2025-12-17 14:44:03.781 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:44:03.782 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:44:03.785 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 169.04 EUR (€) for 639097.98000000 MNT (₮) at rate 3780.750000
-2025-12-17 14:44:03.820 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:44:03.821 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:44:03.822 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 251106.96 MNT (₮) for 317.39919744 USD ($) at rate 0.001264
-2025-12-17 14:44:03.864 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:44:03.865 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:44:03.866 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 464.89 USD ($) for 1604102.94500000 MNT (₮) at rate 3450.500000
-2025-12-17 14:44:04.075 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:44:04.076 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:44:04.077 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 126.45 EUR (€) for 478075.83750000 MNT (₮) at rate 3780.750000
-2025-12-17 14:44:04.333 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:44:04.333 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:44:04.334 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 206.18 EUR (€) for 226.57140818 USD ($) at rate 1.098901
-2025-12-17 14:44:04.558 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:44:04.559 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:44:04.560 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 153.07 EUR (€) for 578719.40250000 MNT (₮) at rate 3780.750000
-2025-12-17 14:44:04.577 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:44:04.578 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:44:04.580 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 113485.64 MNT (₮) for 171.93074460 USD ($) at rate 0.001515
-2025-12-17 14:44:04.618 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:44:04.619 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:44:04.621 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 383.70 USD ($) for 1323956.85000000 MNT (₮) at rate 3450.500000
-2025-12-17 14:44:04.664 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:44:04.665 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:44:04.666 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 110.98 EUR (€) for 121.95603298 USD ($) at rate 1.098901
-2025-12-17 14:44:04.818 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:44:04.819 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:44:04.822 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 721179.12 MNT (₮) for 1174.07960736 USD ($) at rate 0.001628
-2025-12-17 14:44:05.083 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:44:05.084 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:44:05.085 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 770.99 USD ($) for 2660300.99500000 MNT (₮) at rate 3450.500000
-2025-12-17 14:44:05.166 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:44:05.167 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:44:05.168 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 85.73 EUR (€) for 324123.69750000 MNT (₮) at rate 3780.750000
-2025-12-17 14:44:05.225 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:44:05.226 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:44:05.227 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:44:05.227 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:44:05.227 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 90.34 EUR (€) for 341552.95500000 MNT (₮) at rate 3780.750000
-2025-12-17 14:44:05.228 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 293201.66 MNT (₮) for 300.53170150 EUR (€) at rate 0.001025
-2025-12-17 14:44:05.714 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:44:05.715 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:44:05.716 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 441.96 EUR (€) for 485.67028596 USD ($) at rate 1.098901
-2025-12-17 14:44:05.811 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:44:05.812 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:44:05.813 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 266106.91 MNT (₮) for 350.72890738 EUR (€) at rate 0.001318
-2025-12-17 14:44:05.926 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:44:05.926 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:44:05.927 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 483.67 USD ($) for 1668903.33548367 MNT (₮) at rate 3450.500001
-2025-12-17 14:44:05.985 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:44:05.986 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:44:05.987 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 614789.94 MNT (₮) for 973.82726496 EUR (€) at rate 0.001584
-2025-12-17 14:44:06.008 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:44:06.009 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:44:06.011 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 320.44 USD ($) for 1105678.22032044 MNT (₮) at rate 3450.500001
-2025-12-17 14:44:06.285 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:44:06.287 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:44:06.288 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 247.07 EUR (€) for 271.50547007 USD ($) at rate 1.098901
-2025-12-17 14:44:06.546 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:44:06.547 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:44:06.548 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 162.60 USD ($) for 561051.30016260 MNT (₮) at rate 3450.500001
-2025-12-17 14:44:06.549 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:44:06.550 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:44:06.550 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 315.81 USD ($) for 1089702.40531581 MNT (₮) at rate 3450.500001
-2025-12-17 14:44:06.555 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:44:06.556 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:44:06.557 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 423.56 USD ($) for 385.44002356 EUR (€) at rate 0.910001
-2025-12-17 14:44:06.955 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:44:06.956 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:44:06.957 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 387.10 EUR (€) for 1463528.32500000 MNT (₮) at rate 3780.750000
-2025-12-17 14:44:07.084 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:44:07.085 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:44:07.086 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 1558495.00 MNT (₮) for 3660.90475500 USD ($) at rate 0.002349
-2025-12-17 14:44:07.156 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:44:07.157 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:44:07.159 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 475.21 EUR (€) for 1796650.20750000 MNT (₮) at rate 3780.750000
-2025-12-17 14:44:07.196 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:44:07.196 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:44:07.197 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 520.33 EUR (€) for 571.79115733 USD ($) at rate 1.098901
-2025-12-17 14:44:07.260 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:44:07.261 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:44:07.262 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 81.67 EUR (€) for 308773.85250000 MNT (₮) at rate 3780.750000
-2025-12-17 14:44:07.370 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:44:07.371 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:44:07.372 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 126.97 EUR (€) for 480041.82750000 MNT (₮) at rate 3780.750000
-2025-12-17 14:44:07.641 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:44:07.642 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:44:07.643 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 435170.49 MNT (₮) for 1700.21110443 USD ($) at rate 0.003907
-2025-12-17 14:44:07.966 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:44:07.967 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:44:07.968 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 127.81 USD ($) for 116.30722781 EUR (€) at rate 0.910001
-2025-12-17 14:44:07.995 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:44:07.996 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:44:07.997 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 151.11 EUR (€) for 166.05508122 USD ($) at rate 1.098902
-2025-12-17 14:44:08.058 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:44:08.059 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:44:08.060 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 110.07 EUR (€) for 120.95614314 USD ($) at rate 1.098902
-2025-12-17 14:44:08.226 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:44:08.226 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:44:08.227 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 308680.19 MNT (₮) for 678.78773781 EUR (€) at rate 0.002199
-2025-12-17 14:44:08.411 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:44:08.412 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:44:08.413 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 98.01 EUR (€) for 107.70338502 USD ($) at rate 1.098902
-2025-12-17 14:44:08.594 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:44:08.594 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:44:08.595 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 541.26 EUR (€) for 594.79169652 USD ($) at rate 1.098902
-2025-12-17 14:44:08.645 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:44:08.646 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:44:08.648 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 1080945.68 MNT (₮) for 2711.01176544 EUR (€) at rate 0.002508
-2025-12-17 14:44:08.760 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:44:08.761 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:44:08.762 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 215.62 USD ($) for 743996.81021562 MNT (₮) at rate 3450.500001
-2025-12-17 14:44:08.952 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:44:08.953 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:44:08.957 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 739932.11 MNT (₮) for 3212.78522162 USD ($) at rate 0.004342
-2025-12-17 14:44:09.232 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:44:09.233 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:44:09.235 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 147.92 EUR (€) for 162.54973176 USD ($) at rate 1.098903
-2025-12-17 14:44:09.338 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:44:09.339 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:44:09.340 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 540566.72 MNT (₮) for 1940.09395808 EUR (€) at rate 0.003589
-2025-12-17 14:44:09.512 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:44:09.513 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Sarangerel Boldbaatar transitioned to TRADING state
-2025-12-17 14:44:09.514 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarangerel Boldbaatar exchanged 1979.43 USD ($) for 1801.28327943 EUR (€) at rate 0.910001
-2025-12-17 14:44:09.574 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:44:09.574 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:44:09.575 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 105557.52 MNT (₮) for 435.95255760 EUR (€) at rate 0.004130
-2025-12-17 14:44:09.591 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:44:09.592 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:44:09.592 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 472.56 EUR (€) for 519.29760168 USD ($) at rate 1.098903
-2025-12-17 14:44:09.737 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:44:09.737 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:44:09.738 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 537.49 USD ($) for 1854609.24553749 MNT (₮) at rate 3450.500001
-2025-12-17 14:44:09.959 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:44:09.960 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:44:09.961 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 726887.52 MNT (₮) for 3694.04237664 USD ($) at rate 0.005082
-2025-12-17 14:44:09.986 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:44:09.987 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:44:09.988 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 99.70 USD ($) for 90.72729910 EUR (€) at rate 0.910003
-2025-12-17 14:44:10.090 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:44:10.090 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:44:10.091 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 928600.43 MNT (₮) for 3933.55142148 EUR (€) at rate 0.004236
-2025-12-17 14:44:10.245 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:44:10.246 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Bayarmaa Enkhbat transitioned to TRADING state
-2025-12-17 14:44:10.247 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Bayarmaa Enkhbat exchanged 446.83 USD ($) for 1541786.91589366 MNT (₮) at rate 3450.500002
-2025-12-17 14:44:10.268 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:44:10.269 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:44:10.270 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 601.85 USD ($) for 547.68530555 EUR (€) at rate 0.910003
-2025-12-17 14:44:10.381 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:44:10.381 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:44:10.382 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 563446.46 MNT (₮) for 3273.06048614 USD ($) at rate 0.005809
-2025-12-17 14:44:10.436 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Sarangerel Boldbaatar transitioned to ACTIVE state
-2025-12-17 14:44:10.438 [Participant-7] INFO  com.exchange.thread.ParticipantThread - Participant Sarangerel Boldbaatar completed: 10 successful, 0 rejected
-2025-12-17 14:44:10.523 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:44:10.524 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:44:10.526 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 1442.66 USD ($) for 4977898.33288532 MNT (₮) at rate 3450.500002
-2025-12-17 14:44:10.539 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:44:10.540 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:44:10.542 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 114.26 USD ($) for 103.97705704 EUR (€) at rate 0.910004
-2025-12-17 14:44:10.733 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:44:10.734 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:44:10.734 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 1098.99 USD ($) for 3792064.99829697 MNT (₮) at rate 3450.500003
-2025-12-17 14:44:10.769 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:44:10.770 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant Batbayar Erdene transitioned to TRADING state
-2025-12-17 14:44:10.771 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: Batbayar Erdene exchanged 513.36 USD ($) for 467.15965344 EUR (€) at rate 0.910004
-2025-12-17 14:44:10.852 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Bayarmaa Enkhbat transitioned to ACTIVE state
-2025-12-17 14:44:10.853 [Participant-8] INFO  com.exchange.thread.ParticipantThread - Participant Bayarmaa Enkhbat completed: 10 successful, 0 rejected
-2025-12-17 14:44:11.040 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:44:11.040 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Tsetsegmaa Ganbold transitioned to TRADING state
-2025-12-17 14:44:11.042 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Tsetsegmaa Ganbold exchanged 68928.50 MNT (₮) for 439.21240200 USD ($) at rate 0.006372
-2025-12-17 14:44:11.114 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:44:11.114 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Ganzorig Tumur transitioned to TRADING state
-2025-12-17 14:44:11.115 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Ganzorig Tumur exchanged 186.47 EUR (€) for 204.91244241 USD ($) at rate 1.098903
-2025-12-17 14:44:11.391 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:44:11.391 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:44:11.392 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 1488.51 EUR (€) for 5627684.18250000 MNT (₮) at rate 3780.750000
-2025-12-17 14:44:11.427 [Participant-1] DEBUG com.exchange.state.TradingState - Participant Batbayar Erdene transitioned to ACTIVE state
-2025-12-17 14:44:11.427 [Participant-1] INFO  com.exchange.thread.ParticipantThread - Participant Batbayar Erdene completed: 10 successful, 0 rejected
-2025-12-17 14:44:11.429 [main] INFO  com.exchange.Main - Participant Batbayar Erdene completed: 10 successful, 0 rejected
-2025-12-17 14:44:11.771 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Tsetsegmaa Ganbold transitioned to ACTIVE state
-2025-12-17 14:44:11.773 [Participant-2] INFO  com.exchange.thread.ParticipantThread - Participant Tsetsegmaa Ganbold completed: 10 successful, 0 rejected
-2025-12-17 14:44:11.773 [main] INFO  com.exchange.Main - Participant Tsetsegmaa Ganbold completed: 10 successful, 0 rejected
-2025-12-17 14:44:11.887 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:44:11.888 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Enkhjargal Munkhbat transitioned to TRADING state
-2025-12-17 14:44:11.888 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Enkhjargal Munkhbat exchanged 76.24 EUR (€) for 288244.38007624 MNT (₮) at rate 3780.750001
-2025-12-17 14:44:12.024 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:44:12.025 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:44:12.026 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 62.59 USD ($) for 56.95721295 EUR (€) at rate 0.910005
-2025-12-17 14:44:12.143 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Ganzorig Tumur transitioned to ACTIVE state
-2025-12-17 14:44:12.145 [Participant-6] INFO  com.exchange.thread.ParticipantThread - Participant Ganzorig Tumur completed: 10 successful, 0 rejected
-2025-12-17 14:44:12.520 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:44:12.520 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Oyunerdene Tserendorj transitioned to TRADING state
-2025-12-17 14:44:12.521 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Oyunerdene Tserendorj exchanged 713.59 USD ($) for 2462242.29785436 MNT (₮) at rate 3450.500004
-2025-12-17 14:44:12.750 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:44:12.750 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant Altantsetseg Dorjsuren transitioned to TRADING state
-2025-12-17 14:44:12.751 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: Altantsetseg Dorjsuren exchanged 85.26 EUR (€) for 322346.74508526 MNT (₮) at rate 3780.750001
-2025-12-17 14:44:12.925 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Enkhjargal Munkhbat transitioned to ACTIVE state
-2025-12-17 14:44:12.925 [Participant-3] INFO  com.exchange.thread.ParticipantThread - Participant Enkhjargal Munkhbat completed: 10 successful, 0 rejected
-2025-12-17 14:44:12.925 [main] INFO  com.exchange.Main - Participant Enkhjargal Munkhbat completed: 10 successful, 0 rejected
-2025-12-17 14:44:13.137 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Oyunerdene Tserendorj transitioned to ACTIVE state
-2025-12-17 14:44:13.138 [Participant-4] INFO  com.exchange.thread.ParticipantThread - Participant Oyunerdene Tserendorj completed: 10 successful, 0 rejected
-2025-12-17 14:44:13.138 [main] INFO  com.exchange.Main - Participant Oyunerdene Tserendorj completed: 10 successful, 0 rejected
-2025-12-17 14:44:13.984 [Participant-5] DEBUG com.exchange.state.TradingState - Participant Altantsetseg Dorjsuren transitioned to ACTIVE state
-2025-12-17 14:44:13.985 [Participant-5] INFO  com.exchange.thread.ParticipantThread - Participant Altantsetseg Dorjsuren completed: 10 successful, 0 rejected
-2025-12-17 14:44:13.986 [main] INFO  com.exchange.Main - Participant Altantsetseg Dorjsuren completed: 10 successful, 0 rejected
-2025-12-17 14:44:13.986 [main] INFO  com.exchange.Main - Participant Ganzorig Tumur completed: 10 successful, 0 rejected
-2025-12-17 14:44:13.986 [main] INFO  com.exchange.Main - Participant Sarangerel Boldbaatar completed: 10 successful, 0 rejected
-2025-12-17 14:44:13.987 [main] INFO  com.exchange.Main - Participant Bayarmaa Enkhbat completed: 10 successful, 0 rejected
-2025-12-17 14:44:15.989 [main] INFO  com.exchange.thread.BalanceReporter - Balance Reporter stop requested
-2025-12-17 14:44:16.956 [BalanceReporter] INFO  com.exchange.thread.BalanceReporter - Balance Reporter stopped
-2025-12-17 14:44:16.957 [main] INFO  com.exchange.Main - ════════════════════════════════════════════════════════════════════════════════
-2025-12-17 14:44:16.957 [main] INFO  com.exchange.Main - FINAL SUMMARY
-2025-12-17 14:44:16.958 [main] INFO  com.exchange.Main - ════════════════════════════════════════════════════════════════════════════════
-2025-12-17 14:44:16.958 [main] INFO  com.exchange.Main - Total transactions executed: 80
-2025-12-17 14:44:16.958 [main] INFO  com.exchange.Main - Application completed successfully
+2025-12-21 15:29:13.694 [main] INFO  com.exchange.Main - Currency Exchange Application Starting...
+2025-12-21 15:29:13.716 [main] INFO  com.exchange.util.DataReader - Loaded participant: John Smith
+2025-12-21 15:29:13.716 [main] INFO  com.exchange.util.DataReader - Loaded participant: Emily Clark
+2025-12-21 15:29:13.716 [main] INFO  com.exchange.util.DataReader - Loaded participant: Michael Brown
+2025-12-21 15:29:13.716 [main] INFO  com.exchange.util.DataReader - Loaded participant: Sarah Wilson
+2025-12-21 15:29:13.717 [main] INFO  com.exchange.util.DataReader - Loaded participant: David Miller
+2025-12-21 15:29:13.717 [main] INFO  com.exchange.util.DataReader - Loaded participant: Daniel Anderson
+2025-12-21 15:29:13.717 [main] INFO  com.exchange.util.DataReader - Loaded participant: Jessica Taylor
+2025-12-21 15:29:13.717 [main] INFO  com.exchange.util.DataReader - Loaded participant: Laura Thomas
+2025-12-21 15:29:13.717 [main] INFO  com.exchange.util.DataReader - Total 8 participants loaded from data/participants.txt
+2025-12-21 15:29:13.717 [main] INFO  com.exchange.service.Exchange - Exchange initialized with default rates
+2025-12-21 15:29:13.718 [main] INFO  com.exchange.service.Exchange - Participant registered: John Smith
+2025-12-21 15:29:13.718 [main] INFO  com.exchange.service.Exchange - Participant registered: Emily Clark
+2025-12-21 15:29:13.718 [main] INFO  com.exchange.service.Exchange - Participant registered: Michael Brown
+2025-12-21 15:29:13.718 [main] INFO  com.exchange.service.Exchange - Participant registered: Sarah Wilson
+2025-12-21 15:29:13.718 [main] INFO  com.exchange.service.Exchange - Participant registered: David Miller
+2025-12-21 15:29:13.718 [main] INFO  com.exchange.service.Exchange - Participant registered: Daniel Anderson
+2025-12-21 15:29:13.718 [main] INFO  com.exchange.service.Exchange - Participant registered: Jessica Taylor
+2025-12-21 15:29:13.718 [main] INFO  com.exchange.service.Exchange - Participant registered: Laura Thomas
+2025-12-21 15:29:13.718 [main] INFO  com.exchange.Main - Starting trading with 8 participants, 10 transactions each
+2025-12-21 15:29:13.718 [BalanceReporter] INFO  com.exchange.thread.BalanceReporter - Balance Reporter started, reporting every 3000 ms
+2025-12-21 15:29:13.719 [Participant-1] INFO  com.exchange.thread.ParticipantThread - Participant John Smith started trading
+2025-12-21 15:29:13.719 [Participant-4] INFO  com.exchange.thread.ParticipantThread - Participant Sarah Wilson started trading
+2025-12-21 15:29:13.720 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant John Smith transitioned to TRADING state
+2025-12-21 15:29:13.720 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Sarah Wilson transitioned to TRADING state
+2025-12-21 15:29:13.719 [Participant-2] INFO  com.exchange.thread.ParticipantThread - Participant Emily Clark started trading
+2025-12-21 15:29:13.719 [Participant-3] INFO  com.exchange.thread.ParticipantThread - Participant Michael Brown started trading
+2025-12-21 15:29:13.720 [Participant-6] INFO  com.exchange.thread.ParticipantThread - Participant Daniel Anderson started trading
+2025-12-21 15:29:13.720 [Participant-5] INFO  com.exchange.thread.ParticipantThread - Participant David Miller started trading
+2025-12-21 15:29:13.720 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Emily Clark transitioned to TRADING state
+2025-12-21 15:29:13.720 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Daniel Anderson transitioned to TRADING state
+2025-12-21 15:29:13.720 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Michael Brown transitioned to TRADING state
+2025-12-21 15:29:13.720 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant David Miller transitioned to TRADING state
+2025-12-21 15:29:13.721 [main] INFO  com.exchange.Main - All participant threads submitted. Waiting for completion...
+2025-12-21 15:29:13.720 [Participant-7] INFO  com.exchange.thread.ParticipantThread - Participant Jessica Taylor started trading
+2025-12-21 15:29:13.721 [Participant-8] INFO  com.exchange.thread.ParticipantThread - Participant Laura Thomas started trading
+2025-12-21 15:29:13.721 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Laura Thomas transitioned to TRADING state
+2025-12-21 15:29:13.721 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Jessica Taylor transitioned to TRADING state
+2025-12-21 15:29:13.722 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Michael Brown exchanged 194.14 USD ($) for 176.6674 EUR (€) at rate 0.91
+2025-12-21 15:29:13.722 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarah Wilson exchanged 168043.58 MNT (₮) for 78.47635186 USD ($) at rate 0.000467
+2025-12-21 15:29:13.722 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: David Miller exchanged 213.71 USD ($) for 194.47610000 EUR (€) at rate 0.910000
+2025-12-21 15:29:13.722 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Jessica Taylor exchanged 283.02 USD ($) for 257.54820000 EUR (€) at rate 0.910000
+2025-12-21 15:29:13.722 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Laura Thomas exchanged 146.09 EUR (€) for 552329.76750000 MNT (₮) at rate 3780.750000
+2025-12-21 15:29:13.722 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Daniel Anderson exchanged 228.56 EUR (€) for 864128.2200 MNT (₮) at rate 3780.75
+2025-12-21 15:29:13.723 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: John Smith exchanged 399.53 USD ($) for 363.57230000 EUR (€) at rate 0.910000
+2025-12-21 15:29:13.722 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Emily Clark exchanged 176801.63 MNT (₮) for 51.27247270 USD ($) at rate 0.000290
+2025-12-21 15:29:14.287 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Jessica Taylor transitioned to ACTIVE state
+2025-12-21 15:29:14.288 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Jessica Taylor transitioned to TRADING state
+2025-12-21 15:29:14.289 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Jessica Taylor exchanged 289423.18 MNT (₮) for 183.78371930 USD ($) at rate 0.000635
+2025-12-21 15:29:14.344 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Laura Thomas transitioned to ACTIVE state
+2025-12-21 15:29:14.344 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Laura Thomas transitioned to TRADING state
+2025-12-21 15:29:14.345 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Laura Thomas exchanged 109.48 EUR (€) for 120.30768148 USD ($) at rate 1.098901
+2025-12-21 15:29:14.374 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Daniel Anderson transitioned to ACTIVE state
+2025-12-21 15:29:14.374 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Daniel Anderson transitioned to TRADING state
+2025-12-21 15:29:14.375 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Daniel Anderson exchanged 283609.82 MNT (₮) for 74.87299248 EUR (€) at rate 0.000264
+2025-12-21 15:29:14.631 [Participant-1] DEBUG com.exchange.state.TradingState - Participant John Smith transitioned to ACTIVE state
+2025-12-21 15:29:14.631 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant John Smith transitioned to TRADING state
+2025-12-21 15:29:14.631 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: John Smith exchanged 151.56 USD ($) for 522957.7800 MNT (₮) at rate 3450.50
+2025-12-21 15:29:14.670 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Michael Brown transitioned to ACTIVE state
+2025-12-21 15:29:14.670 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Michael Brown transitioned to TRADING state
+2025-12-21 15:29:14.670 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Michael Brown exchanged 83.96 EUR (€) for 317431.77000000 MNT (₮) at rate 3780.750000
+2025-12-21 15:29:14.960 [Participant-5] DEBUG com.exchange.state.TradingState - Participant David Miller transitioned to ACTIVE state
+2025-12-21 15:29:14.960 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant David Miller transitioned to TRADING state
+2025-12-21 15:29:14.961 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: David Miller exchanged 82.20 USD ($) for 283631.10000000 MNT (₮) at rate 3450.500000
+2025-12-21 15:29:15.145 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Emily Clark transitioned to ACTIVE state
+2025-12-21 15:29:15.146 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Emily Clark transitioned to TRADING state
+2025-12-21 15:29:15.148 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Emily Clark exchanged 141429.37 MNT (₮) for 77.50329476 EUR (€) at rate 0.000548
+2025-12-21 15:29:15.168 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Sarah Wilson transitioned to ACTIVE state
+2025-12-21 15:29:15.169 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Sarah Wilson transitioned to TRADING state
+2025-12-21 15:29:15.169 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarah Wilson exchanged 663.34 USD ($) for 603.63940000 EUR (€) at rate 0.910000
+2025-12-21 15:29:15.339 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Laura Thomas transitioned to ACTIVE state
+2025-12-21 15:29:15.340 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Laura Thomas transitioned to TRADING state
+2025-12-21 15:29:15.340 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Laura Thomas exchanged 43.28 EUR (€) for 163630.86000000 MNT (₮) at rate 3780.750000
+2025-12-21 15:29:15.531 [Participant-5] DEBUG com.exchange.state.TradingState - Participant David Miller transitioned to ACTIVE state
+2025-12-21 15:29:15.531 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant David Miller transitioned to TRADING state
+2025-12-21 15:29:15.532 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: David Miller exchanged 306.71 EUR (€) for 337.04392571 USD ($) at rate 1.098901
+2025-12-21 15:29:15.582 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Jessica Taylor transitioned to ACTIVE state
+2025-12-21 15:29:15.582 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Jessica Taylor transitioned to TRADING state
+2025-12-21 15:29:15.582 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Jessica Taylor exchanged 377.22 EUR (€) for 414.52743522 USD ($) at rate 1.098901
+2025-12-21 15:29:15.834 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Daniel Anderson transitioned to ACTIVE state
+2025-12-21 15:29:15.835 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Daniel Anderson transitioned to TRADING state
+2025-12-21 15:29:15.835 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Daniel Anderson exchanged 139.60 EUR (€) for 527792.70000000 MNT (₮) at rate 3780.750000
+2025-12-21 15:29:15.888 [Participant-1] DEBUG com.exchange.state.TradingState - Participant John Smith transitioned to ACTIVE state
+2025-12-21 15:29:15.888 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Laura Thomas transitioned to ACTIVE state
+2025-12-21 15:29:15.888 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant John Smith transitioned to TRADING state
+2025-12-21 15:29:15.889 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Laura Thomas transitioned to TRADING state
+2025-12-21 15:29:15.889 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: John Smith exchanged 147.81 USD ($) for 134.50724781 EUR (€) at rate 0.910001
+2025-12-21 15:29:15.889 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Laura Thomas exchanged 90.17 EUR (€) for 340910.22750000 MNT (₮) at rate 3780.750000
+2025-12-21 15:29:16.075 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Michael Brown transitioned to ACTIVE state
+2025-12-21 15:29:16.075 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Michael Brown transitioned to TRADING state
+2025-12-21 15:29:16.075 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Michael Brown exchanged 236974.13 MNT (₮) for 163.27517557 EUR (€) at rate 0.000689
+2025-12-21 15:29:16.116 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Sarah Wilson transitioned to ACTIVE state
+2025-12-21 15:29:16.116 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Sarah Wilson transitioned to TRADING state
+2025-12-21 15:29:16.117 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarah Wilson exchanged 516.83 USD ($) for 470.31581683 EUR (€) at rate 0.910001
+2025-12-21 15:29:16.161 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Emily Clark transitioned to ACTIVE state
+2025-12-21 15:29:16.161 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Emily Clark transitioned to TRADING state
+2025-12-21 15:29:16.161 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Emily Clark exchanged 276.41 EUR (€) for 303.74722541 USD ($) at rate 1.098901
+2025-12-21 15:29:16.309 [Participant-5] DEBUG com.exchange.state.TradingState - Participant David Miller transitioned to ACTIVE state
+2025-12-21 15:29:16.309 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant David Miller transitioned to TRADING state
+2025-12-21 15:29:16.310 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: David Miller exchanged 121.86 EUR (€) for 133.91207586 USD ($) at rate 1.098901
+2025-12-21 15:29:16.648 [Participant-1] DEBUG com.exchange.state.TradingState - Participant John Smith transitioned to ACTIVE state
+2025-12-21 15:29:16.649 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant John Smith transitioned to TRADING state
+2025-12-21 15:29:16.650 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: John Smith exchanged 483.84 EUR (€) for 1829278.08000000 MNT (₮) at rate 3780.750000
+2025-12-21 15:29:16.677 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Jessica Taylor transitioned to ACTIVE state
+2025-12-21 15:29:16.678 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Jessica Taylor transitioned to TRADING state
+2025-12-21 15:29:16.679 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Jessica Taylor exchanged 494.87 USD ($) for 1707548.93500000 MNT (₮) at rate 3450.500000
+2025-12-21 15:29:17.081 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Sarah Wilson transitioned to ACTIVE state
+2025-12-21 15:29:17.081 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Sarah Wilson transitioned to TRADING state
+2025-12-21 15:29:17.082 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarah Wilson exchanged 578.70 EUR (€) for 2187920.02500000 MNT (₮) at rate 3780.750000
+2025-12-21 15:29:17.117 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Michael Brown transitioned to ACTIVE state
+2025-12-21 15:29:17.118 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Michael Brown transitioned to TRADING state
+2025-12-21 15:29:17.118 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Michael Brown exchanged 78.39 USD ($) for 270484.69500000 MNT (₮) at rate 3450.500000
+2025-12-21 15:29:17.183 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Laura Thomas transitioned to ACTIVE state
+2025-12-21 15:29:17.183 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Laura Thomas transitioned to TRADING state
+2025-12-21 15:29:17.184 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Laura Thomas exchanged 51.88 EUR (€) for 196145.31005188 MNT (₮) at rate 3780.750001
+2025-12-21 15:29:17.334 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Daniel Anderson transitioned to ACTIVE state
+2025-12-21 15:29:17.335 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Daniel Anderson transitioned to TRADING state
+2025-12-21 15:29:17.335 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Daniel Anderson exchanged 669229.75 MNT (₮) for 618.36828900 USD ($) at rate 0.000924
+2025-12-21 15:29:17.501 [Participant-5] DEBUG com.exchange.state.TradingState - Participant David Miller transitioned to ACTIVE state
+2025-12-21 15:29:17.502 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant David Miller transitioned to TRADING state
+2025-12-21 15:29:17.503 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: David Miller exchanged 223.82 USD ($) for 203.67664764 EUR (€) at rate 0.910002
+2025-12-21 15:29:17.599 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Emily Clark transitioned to ACTIVE state
+2025-12-21 15:29:17.599 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Emily Clark transitioned to TRADING state
+2025-12-21 15:29:17.600 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Emily Clark exchanged 69548.65 MNT (₮) for 64.40204990 EUR (€) at rate 0.000926
+2025-12-21 15:29:17.706 [Participant-1] DEBUG com.exchange.state.TradingState - Participant John Smith transitioned to ACTIVE state
+2025-12-21 15:29:17.706 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant John Smith transitioned to TRADING state
+2025-12-21 15:29:17.706 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: John Smith exchanged 257.18 EUR (€) for 282.61535918 USD ($) at rate 1.098901
+2025-12-21 15:29:17.770 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Laura Thomas transitioned to ACTIVE state
+2025-12-21 15:29:17.771 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Laura Thomas transitioned to TRADING state
+2025-12-21 15:29:17.771 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Laura Thomas exchanged 379510.34 MNT (₮) for 377.99229864 EUR (€) at rate 0.000996
+2025-12-21 15:29:17.819 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Jessica Taylor transitioned to ACTIVE state
+2025-12-21 15:29:17.819 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Jessica Taylor transitioned to TRADING state
+2025-12-21 15:29:17.820 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Jessica Taylor exchanged 225004.46 MNT (₮) for 358.43210478 USD ($) at rate 0.001593
+2025-12-21 15:29:18.147 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Michael Brown transitioned to ACTIVE state
+2025-12-21 15:29:18.147 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Michael Brown transitioned to TRADING state
+2025-12-21 15:29:18.148 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Michael Brown exchanged 176.23 USD ($) for 608081.61500000 MNT (₮) at rate 3450.500000
+2025-12-21 15:29:18.269 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Daniel Anderson transitioned to ACTIVE state
+2025-12-21 15:29:18.269 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Sarah Wilson transitioned to ACTIVE state
+2025-12-21 15:29:18.270 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Daniel Anderson transitioned to TRADING state
+2025-12-21 15:29:18.270 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Sarah Wilson transitioned to TRADING state
+2025-12-21 15:29:18.271 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarah Wilson exchanged 480581.82 MNT (₮) for 873.69774876 USD ($) at rate 0.001818
+2025-12-21 15:29:18.271 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Daniel Anderson exchanged 314438.41 MNT (₮) for 571.64902938 USD ($) at rate 0.001818
+2025-12-21 15:29:18.303 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Emily Clark transitioned to ACTIVE state
+2025-12-21 15:29:18.304 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Emily Clark transitioned to TRADING state
+2025-12-21 15:29:18.304 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Emily Clark exchanged 664.42 USD ($) for 2292581.21000000 MNT (₮) at rate 3450.500000
+2025-12-21 15:29:18.438 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Laura Thomas transitioned to ACTIVE state
+2025-12-21 15:29:18.438 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Laura Thomas transitioned to TRADING state
+2025-12-21 15:29:18.438 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Laura Thomas exchanged 284346.69 MNT (₮) for 742.99790097 USD ($) at rate 0.002613
+2025-12-21 15:29:18.455 [Participant-5] DEBUG com.exchange.state.TradingState - Participant David Miller transitioned to ACTIVE state
+2025-12-21 15:29:18.455 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant David Miller transitioned to TRADING state
+2025-12-21 15:29:18.455 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: David Miller exchanged 74980.58 MNT (₮) for 217.21874026 USD ($) at rate 0.002897
+2025-12-21 15:29:18.934 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Daniel Anderson transitioned to ACTIVE state
+2025-12-21 15:29:18.935 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Daniel Anderson transitioned to TRADING state
+2025-12-21 15:29:18.936 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Daniel Anderson exchanged 160.46 EUR (€) for 606659.14516046 MNT (₮) at rate 3780.750001
+2025-12-21 15:29:19.117 [Participant-1] DEBUG com.exchange.state.TradingState - Participant John Smith transitioned to ACTIVE state
+2025-12-21 15:29:19.118 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant John Smith transitioned to TRADING state
+2025-12-21 15:29:19.119 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: John Smith exchanged 726221.66 MNT (₮) for 999.28100416 EUR (€) at rate 0.001376
+2025-12-21 15:29:19.191 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Jessica Taylor transitioned to ACTIVE state
+2025-12-21 15:29:19.191 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Jessica Taylor transitioned to TRADING state
+2025-12-21 15:29:19.192 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Jessica Taylor exchanged 553816.44 MNT (₮) for 1164.12215688 EUR (€) at rate 0.002102
+2025-12-21 15:29:19.282 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Laura Thomas transitioned to ACTIVE state
+2025-12-21 15:29:19.282 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Laura Thomas transitioned to TRADING state
+2025-12-21 15:29:19.283 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Laura Thomas exchanged 615.88 USD ($) for 2125093.94061588 MNT (₮) at rate 3450.500001
+2025-12-21 15:29:19.358 [Participant-5] DEBUG com.exchange.state.TradingState - Participant David Miller transitioned to ACTIVE state
+2025-12-21 15:29:19.358 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant David Miller transitioned to TRADING state
+2025-12-21 15:29:19.359 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: David Miller exchanged 264.90 EUR (€) for 1001520.67526490 MNT (₮) at rate 3780.750001
+2025-12-21 15:29:19.494 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Michael Brown transitioned to ACTIVE state
+2025-12-21 15:29:19.494 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Michael Brown transitioned to TRADING state
+2025-12-21 15:29:19.495 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Michael Brown exchanged 413150.19 MNT (₮) for 1097.32690464 EUR (€) at rate 0.002656
+2025-12-21 15:29:19.615 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Emily Clark transitioned to ACTIVE state
+2025-12-21 15:29:19.617 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Emily Clark transitioned to TRADING state
+2025-12-21 15:29:19.624 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Emily Clark exchanged 352.32 EUR (€) for 387.16480032 USD ($) at rate 1.098901
+2025-12-21 15:29:19.674 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Sarah Wilson transitioned to ACTIVE state
+2025-12-21 15:29:19.674 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Sarah Wilson transitioned to TRADING state
+2025-12-21 15:29:19.675 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarah Wilson exchanged 828811.99 MNT (₮) for 2543.62399731 EUR (€) at rate 0.003069
+2025-12-21 15:29:19.857 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Daniel Anderson transitioned to ACTIVE state
+2025-12-21 15:29:19.858 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Daniel Anderson transitioned to TRADING state
+2025-12-21 15:29:19.858 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Daniel Anderson exchanged 72.99 EUR (€) for 275956.94257299 MNT (₮) at rate 3780.750001
+2025-12-21 15:29:20.097 [Participant-1] DEBUG com.exchange.state.TradingState - Participant John Smith transitioned to ACTIVE state
+2025-12-21 15:29:20.097 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant John Smith transitioned to TRADING state
+2025-12-21 15:29:20.097 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: John Smith exchanged 568.07 EUR (€) for 624.25269107 USD ($) at rate 1.098901
+2025-12-21 15:29:20.224 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Jessica Taylor transitioned to ACTIVE state
+2025-12-21 15:29:20.224 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Jessica Taylor transitioned to TRADING state
+2025-12-21 15:29:20.225 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Jessica Taylor exchanged 342038.09 MNT (₮) for 1333.26447482 EUR (€) at rate 0.003898
+2025-12-21 15:29:20.296 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Emily Clark transitioned to ACTIVE state
+2025-12-21 15:29:20.296 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Emily Clark transitioned to TRADING state
+2025-12-21 15:29:20.297 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Emily Clark exchanged 446286.52 MNT (₮) for 1892.25484480 EUR (€) at rate 0.004240
+2025-12-21 15:29:20.354 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Laura Thomas transitioned to ACTIVE state
+2025-12-21 15:29:20.354 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Laura Thomas transitioned to TRADING state
+2025-12-21 15:29:20.354 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Laura Thomas exchanged 126.04 EUR (€) for 476525.73012604 MNT (₮) at rate 3780.750001
+2025-12-21 15:29:20.685 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Sarah Wilson transitioned to ACTIVE state
+2025-12-21 15:29:20.685 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Sarah Wilson transitioned to TRADING state
+2025-12-21 15:29:20.686 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarah Wilson exchanged 647923.48 MNT (₮) for 3036.16942728 EUR (€) at rate 0.004686
+2025-12-21 15:29:20.794 [Participant-5] DEBUG com.exchange.state.TradingState - Participant David Miller transitioned to ACTIVE state
+2025-12-21 15:29:20.795 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant David Miller transitioned to TRADING state
+2025-12-21 15:29:20.796 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: David Miller exchanged 217405.09 MNT (₮) for 646.12792748 USD ($) at rate 0.002972
+2025-12-21 15:29:20.818 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Michael Brown transitioned to ACTIVE state
+2025-12-21 15:29:20.819 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Michael Brown transitioned to TRADING state
+2025-12-21 15:29:20.820 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Michael Brown exchanged 646.29 EUR (€) for 710.20937358 USD ($) at rate 1.098902
+2025-12-21 15:29:21.051 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Jessica Taylor transitioned to ACTIVE state
+2025-12-21 15:29:21.051 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Jessica Taylor transitioned to TRADING state
+2025-12-21 15:29:21.052 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Jessica Taylor exchanged 575.12 USD ($) for 523.36035024 EUR (€) at rate 0.910002
+2025-12-21 15:29:21.130 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Daniel Anderson transitioned to ACTIVE state
+2025-12-21 15:29:21.131 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Daniel Anderson transitioned to TRADING state
+2025-12-21 15:29:21.131 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Daniel Anderson exchanged 54.23 EUR (€) for 59.59350969 USD ($) at rate 1.098903
+2025-12-21 15:29:21.166 [Participant-1] DEBUG com.exchange.state.TradingState - Participant John Smith transitioned to ACTIVE state
+2025-12-21 15:29:21.166 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant John Smith transitioned to TRADING state
+2025-12-21 15:29:21.167 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: John Smith exchanged 319.77 USD ($) for 290.99165931 EUR (€) at rate 0.910003
+2025-12-21 15:29:21.700 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Emily Clark transitioned to ACTIVE state
+2025-12-21 15:29:21.700 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Emily Clark transitioned to TRADING state
+2025-12-21 15:29:21.701 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Emily Clark exchanged 271.21 USD ($) for 246.80191363 EUR (€) at rate 0.910003
+2025-12-21 15:29:21.754 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Laura Thomas transitioned to ACTIVE state
+2025-12-21 15:29:21.755 [Participant-8] DEBUG com.exchange.state.ActiveState - Participant Laura Thomas transitioned to TRADING state
+2025-12-21 15:29:21.756 [Participant-8] INFO  com.exchange.service.Exchange - Exchange transaction completed: Laura Thomas exchanged 1346748.19 MNT (₮) for 7183.55484546 EUR (€) at rate 0.005334
+2025-12-21 15:29:21.976 [Participant-1] DEBUG com.exchange.state.TradingState - Participant John Smith transitioned to ACTIVE state
+2025-12-21 15:29:21.976 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant John Smith transitioned to TRADING state
+2025-12-21 15:29:21.976 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: John Smith exchanged 214.28 EUR (€) for 235.47293484 USD ($) at rate 1.098903
+2025-12-21 15:29:22.028 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Michael Brown transitioned to ACTIVE state
+2025-12-21 15:29:22.029 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Michael Brown transitioned to TRADING state
+2025-12-21 15:29:22.029 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Michael Brown exchanged 324912.37 MNT (₮) for 1036.14554793 USD ($) at rate 0.003189
+2025-12-21 15:29:22.140 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Sarah Wilson transitioned to ACTIVE state
+2025-12-21 15:29:22.140 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Sarah Wilson transitioned to TRADING state
+2025-12-21 15:29:22.141 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarah Wilson exchanged 2692.98 EUR (€) for 10181484.13769298 MNT (₮) at rate 3780.750001
+2025-12-21 15:29:22.281 [Participant-5] DEBUG com.exchange.state.TradingState - Participant David Miller transitioned to ACTIVE state
+2025-12-21 15:29:22.281 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant David Miller transitioned to TRADING state
+2025-12-21 15:29:22.281 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: David Miller exchanged 470033.53 MNT (₮) for 3140.29401393 EUR (€) at rate 0.006681
+2025-12-21 15:29:22.333 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Daniel Anderson transitioned to ACTIVE state
+2025-12-21 15:29:22.333 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Daniel Anderson transitioned to TRADING state
+2025-12-21 15:29:22.333 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Daniel Anderson exchanged 916.05 USD ($) for 833.60824815 EUR (€) at rate 0.910003
+2025-12-21 15:29:22.446 [Participant-8] DEBUG com.exchange.state.TradingState - Participant Laura Thomas transitioned to ACTIVE state
+2025-12-21 15:29:22.450 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Jessica Taylor transitioned to ACTIVE state
+2025-12-21 15:29:22.450 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Jessica Taylor transitioned to TRADING state
+2025-12-21 15:29:22.450 [Participant-8] INFO  com.exchange.thread.ParticipantThread - Participant Laura Thomas completed: 10 successful, 0 rejected
+2025-12-21 15:29:22.451 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Jessica Taylor exchanged 239.66 USD ($) for 826946.83047932 MNT (₮) at rate 3450.500002
+2025-12-21 15:29:22.476 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Emily Clark transitioned to ACTIVE state
+2025-12-21 15:29:22.476 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Emily Clark transitioned to TRADING state
+2025-12-21 15:29:22.476 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Emily Clark exchanged 834513.38 MNT (₮) for 5967.60518038 EUR (€) at rate 0.007151
+2025-12-21 15:29:22.595 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Michael Brown transitioned to ACTIVE state
+2025-12-21 15:29:22.596 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Michael Brown transitioned to TRADING state
+2025-12-21 15:29:22.596 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Michael Brown exchanged 205892.65 MNT (₮) for 1644.25870290 EUR (€) at rate 0.007986
+2025-12-21 15:29:22.784 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Sarah Wilson transitioned to ACTIVE state
+2025-12-21 15:29:22.784 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Sarah Wilson transitioned to TRADING state
+2025-12-21 15:29:22.785 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarah Wilson exchanged 2207644.04 MNT (₮) for 7757.66115656 USD ($) at rate 0.003514
+2025-12-21 15:29:23.156 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Michael Brown transitioned to ACTIVE state
+2025-12-21 15:29:23.157 [Participant-3] DEBUG com.exchange.state.ActiveState - Participant Michael Brown transitioned to TRADING state
+2025-12-21 15:29:23.158 [Participant-3] INFO  com.exchange.service.Exchange - Exchange transaction completed: Michael Brown exchanged 124088.27 MNT (₮) for 1016.53110784 EUR (€) at rate 0.008192
+2025-12-21 15:29:23.231 [Participant-1] DEBUG com.exchange.state.TradingState - Participant John Smith transitioned to ACTIVE state
+2025-12-21 15:29:23.231 [Participant-1] DEBUG com.exchange.state.ActiveState - Participant John Smith transitioned to TRADING state
+2025-12-21 15:29:23.232 [Participant-1] INFO  com.exchange.service.Exchange - Exchange transaction completed: John Smith exchanged 381.31 USD ($) for 346.99362524 EUR (€) at rate 0.910004
+2025-12-21 15:29:23.434 [Participant-5] DEBUG com.exchange.state.TradingState - Participant David Miller transitioned to ACTIVE state
+2025-12-21 15:29:23.435 [Participant-5] DEBUG com.exchange.state.ActiveState - Participant David Miller transitioned to TRADING state
+2025-12-21 15:29:23.435 [Participant-5] INFO  com.exchange.service.Exchange - Exchange transaction completed: David Miller exchanged 945.28 EUR (€) for 1038.77102784 USD ($) at rate 1.098903
+2025-12-21 15:29:23.442 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Emily Clark transitioned to ACTIVE state
+2025-12-21 15:29:23.442 [Participant-2] DEBUG com.exchange.state.ActiveState - Participant Emily Clark transitioned to TRADING state
+2025-12-21 15:29:23.442 [Participant-2] INFO  com.exchange.service.Exchange - Exchange transaction completed: Emily Clark exchanged 2255.11 EUR (€) for 2478.14939944 USD ($) at rate 1.098904
+2025-12-21 15:29:23.575 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Sarah Wilson transitioned to ACTIVE state
+2025-12-21 15:29:23.576 [Participant-4] DEBUG com.exchange.state.ActiveState - Participant Sarah Wilson transitioned to TRADING state
+2025-12-21 15:29:23.576 [Participant-4] INFO  com.exchange.service.Exchange - Exchange transaction completed: Sarah Wilson exchanged 1078909.13 MNT (₮) for 6173.51804186 USD ($) at rate 0.005722
+2025-12-21 15:29:23.650 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Jessica Taylor transitioned to ACTIVE state
+2025-12-21 15:29:23.651 [Participant-7] DEBUG com.exchange.state.ActiveState - Participant Jessica Taylor transitioned to TRADING state
+2025-12-21 15:29:23.651 [Participant-7] INFO  com.exchange.service.Exchange - Exchange transaction completed: Jessica Taylor exchanged 357.23 USD ($) for 325.08072892 EUR (€) at rate 0.910004
+2025-12-21 15:29:23.781 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Daniel Anderson transitioned to ACTIVE state
+2025-12-21 15:29:23.782 [Participant-6] DEBUG com.exchange.state.ActiveState - Participant Daniel Anderson transitioned to TRADING state
+2025-12-21 15:29:23.782 [Participant-6] INFO  com.exchange.service.Exchange - Exchange transaction completed: Daniel Anderson exchanged 594.36 USD ($) for 540.86997744 EUR (€) at rate 0.910004
+2025-12-21 15:29:24.008 [Participant-1] DEBUG com.exchange.state.TradingState - Participant John Smith transitioned to ACTIVE state
+2025-12-21 15:29:24.008 [Participant-1] INFO  com.exchange.thread.ParticipantThread - Participant John Smith completed: 10 successful, 0 rejected
+2025-12-21 15:29:24.008 [main] INFO  com.exchange.Main - Participant John Smith completed: 10 successful, 0 rejected
+2025-12-21 15:29:24.067 [Participant-5] DEBUG com.exchange.state.TradingState - Participant David Miller transitioned to ACTIVE state
+2025-12-21 15:29:24.068 [Participant-5] INFO  com.exchange.thread.ParticipantThread - Participant David Miller completed: 10 successful, 0 rejected
+2025-12-21 15:29:24.256 [Participant-2] DEBUG com.exchange.state.TradingState - Participant Emily Clark transitioned to ACTIVE state
+2025-12-21 15:29:24.256 [Participant-2] INFO  com.exchange.thread.ParticipantThread - Participant Emily Clark completed: 10 successful, 0 rejected
+2025-12-21 15:29:24.256 [main] INFO  com.exchange.Main - Participant Emily Clark completed: 10 successful, 0 rejected
+2025-12-21 15:29:24.386 [Participant-3] DEBUG com.exchange.state.TradingState - Participant Michael Brown transitioned to ACTIVE state
+2025-12-21 15:29:24.388 [Participant-3] INFO  com.exchange.thread.ParticipantThread - Participant Michael Brown completed: 10 successful, 0 rejected
+2025-12-21 15:29:24.388 [main] INFO  com.exchange.Main - Participant Michael Brown completed: 10 successful, 0 rejected
+2025-12-21 15:29:24.439 [Participant-4] DEBUG com.exchange.state.TradingState - Participant Sarah Wilson transitioned to ACTIVE state
+2025-12-21 15:29:24.440 [Participant-4] INFO  com.exchange.thread.ParticipantThread - Participant Sarah Wilson completed: 10 successful, 0 rejected
+2025-12-21 15:29:24.440 [main] INFO  com.exchange.Main - Participant Sarah Wilson completed: 10 successful, 0 rejected
+2025-12-21 15:29:24.441 [main] INFO  com.exchange.Main - Participant David Miller completed: 10 successful, 0 rejected
+2025-12-21 15:29:24.656 [Participant-7] DEBUG com.exchange.state.TradingState - Participant Jessica Taylor transitioned to ACTIVE state
+2025-12-21 15:29:24.656 [Participant-7] INFO  com.exchange.thread.ParticipantThread - Participant Jessica Taylor completed: 10 successful, 0 rejected
+2025-12-21 15:29:25.259 [Participant-6] DEBUG com.exchange.state.TradingState - Participant Daniel Anderson transitioned to ACTIVE state
+2025-12-21 15:29:25.260 [Participant-6] INFO  com.exchange.thread.ParticipantThread - Participant Daniel Anderson completed: 10 successful, 0 rejected
+2025-12-21 15:29:25.261 [main] INFO  com.exchange.Main - Participant Daniel Anderson completed: 10 successful, 0 rejected
+2025-12-21 15:29:25.261 [main] INFO  com.exchange.Main - Participant Jessica Taylor completed: 10 successful, 0 rejected
+2025-12-21 15:29:25.261 [main] INFO  com.exchange.Main - Participant Laura Thomas completed: 10 successful, 0 rejected
+2025-12-21 15:29:27.268 [main] INFO  com.exchange.thread.BalanceReporter - Balance Reporter stop requested
+2025-12-21 15:29:28.760 [BalanceReporter] INFO  com.exchange.thread.BalanceReporter - Balance Reporter stopped
+2025-12-21 15:29:28.761 [main] INFO  com.exchange.Main - ════════════════════════════════════════════════════════════════════════════════
+2025-12-21 15:29:28.761 [main] INFO  com.exchange.Main - FINAL SUMMARY
+2025-12-21 15:29:28.761 [main] INFO  com.exchange.Main - ════════════════════════════════════════════════════════════════════════════════
+2025-12-21 15:29:28.762 [main] INFO  com.exchange.Main - Total transactions executed: 80
+2025-12-21 15:29:28.762 [main] INFO  com.exchange.Main - Application completed successfully

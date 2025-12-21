@@ -10,8 +10,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.math.BigDecimal;
-import java.util.Random;
+import java.math.RoundingMode;
 import java.util.concurrent.Callable;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 public class ParticipantThread implements Callable<String> {
@@ -20,52 +24,45 @@ public class ParticipantThread implements Callable<String> {
     private final Participant participant;
     private final Exchange exchange;
     private final int numberOfTransactions;
-    private final Random random;
 
     public ParticipantThread(Participant participant, int numberOfTransactions) {
         this.participant = participant;
         this.exchange = Exchange.getInstance();
         this.numberOfTransactions = numberOfTransactions;
-        this.random = new Random();
     }
 
     @Override
     public String call() throws Exception {
         logger.info("Participant {} started trading", participant.getName());
 
+        ExecutorService transactionPool = Executors.newFixedThreadPool(
+            Math.max(1, participant.getMaxConcurrentTransactions()),
+            r -> {
+                Thread thread = new Thread(r);
+                thread.setName(participant.getName() + "-txn-" + thread.getId());
+                thread.setDaemon(true);
+                return thread;
+            }
+        );
+
+        CompletableFuture<Boolean>[] transactionFutures = createTransactions(transactionPool);
+
         int completedTransactions = 0;
         int rejectedTransactions = 0;
-
-        for (int i = 0; i < numberOfTransactions; i++) {
-            if (!participant.getState().canTrade()) {
-                logger.warn("Participant {} cannot trade in current state: {}",
-                    participant.getName(), participant.getState().getStateName());
-                TimeUnit.MILLISECONDS.sleep(500);
-                continue;
-            }
-
-            if (participant.canStartTransaction()) {
-                participant.getState().handle(participant);
-                participant.setState(new TradingState());
-                participant.incrementActiveTransactions();
-
-                try {
-                    boolean success = executeRandomTransaction();
-                    if (success) {
-                        completedTransactions++;
-                    } else {
-                        rejectedTransactions++;
-                    }
-
-                    TimeUnit.MILLISECONDS.sleep(random.nextInt(1000) + 500);
-                } finally {
-                    participant.decrementActiveTransactions();
-                    participant.getState().handle(participant);
+       
+        try {
+            for (CompletableFuture<Boolean> future : transactionFutures) {
+                boolean success = future.join();
+                if (success) {
+                    completedTransactions++;
+                } else {
+                    rejectedTransactions++;
                 }
-            } else {
-                logger.debug("Participant {} waiting for available transaction slot",
-                    participant.getName());
-                TimeUnit.MILLISECONDS.sleep(300);
+  }
+        } finally {
+            transactionPool.shutdown();
+            if (!transactionPool.awaitTermination(5, TimeUnit.SECONDS)) {
+                transactionPool.shutdownNow();
             }
         }
 
@@ -77,13 +74,53 @@ public class ParticipantThread implements Callable<String> {
         return result;
     }
 
+    private CompletableFuture<Boolean>[] createTransactions(ExecutorService transactionPool) {
+        @SuppressWarnings("unchecked")
+        CompletableFuture<Boolean>[] futures = new CompletableFuture[numberOfTransactions];
+
+        for (int i = 0; i < numberOfTransactions; i++) {
+            futures[i] = CompletableFuture.supplyAsync(this::executeWithConcurrencyControl,
+                transactionPool);
+        }
+        return futures;
+    }
+
+    private boolean executeWithConcurrencyControl() {
+        if (!participant.getState().canTrade()) {
+            logger.warn("Participant {} cannot trade in current state: {}",
+                participant.getName(), participant.getState().getStateName());
+            sleepSilently(500);
+            return false;
+        }
+
+        while (!participant.canStartTransaction()) {
+            logger.debug("Participant {} waiting for available transaction slot",
+                participant.getName());
+            sleepSilently(300);
+        }
+
+        participant.getState().handle(participant);
+        participant.setState(new TradingState());
+        participant.incrementActiveTransactions();
+
+        try {
+            boolean success = executeRandomTransaction();
+            sleepSilently(ThreadLocalRandom.current().nextInt(500, 1501));
+            return success;
+        } finally {
+            participant.decrementActiveTransactions();
+            participant.getState().handle(participant);
+        }
+    }
+
+
     private boolean executeRandomTransaction() {
         Currency[] currencies = Currency.values();
-        Currency fromCurrency = currencies[random.nextInt(currencies.length)];
+        Currency fromCurrency = currencies[ThreadLocalRandom.current().nextInt(currencies.length)];
         Currency toCurrency;
 
         do {
-            toCurrency = currencies[random.nextInt(currencies.length)];
+            toCurrency = currencies[ThreadLocalRandom.current().nextInt(currencies.length)];
         } while (toCurrency == fromCurrency);
 
         BigDecimal maxAmount = participant.getBalance().getAmount(fromCurrency);
@@ -94,8 +131,8 @@ public class ParticipantThread implements Callable<String> {
         }
 
         BigDecimal amount = maxAmount
-            .multiply(BigDecimal.valueOf(random.nextDouble() * 0.3 + 0.1))
-            .setScale(2, BigDecimal.ROUND_HALF_UP);
+            .multiply(BigDecimal.valueOf(ThreadLocalRandom.current().nextDouble() * 0.3 + 0.1))
+            .setScale(2, RoundingMode.HALF_UP);
 
         if (amount.compareTo(BigDecimal.valueOf(0.01)) < 0) {
             amount = BigDecimal.valueOf(0.01);
@@ -117,4 +154,13 @@ public class ParticipantThread implements Callable<String> {
 
         return exchange.executeTransaction(transaction);
     }
+
+    private void sleepSilently(long millis) {
+        try {
+            TimeUnit.MILLISECONDS.sleep(millis);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
 }
+

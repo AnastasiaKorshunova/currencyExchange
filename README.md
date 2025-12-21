@@ -91,5 +91,5 @@ The `Exchange` class:
 - executes transactions  
 - manages shared resources  
 
-Implemented as a **thread-safe Singleton** using **double-checked locking**  
-(Enum Singleton is **not used**, as required)
+Implemented as a **thread-safe Singleton** using an **initialization-on-demand
+holder** (Enum Singleton is **not used**, as required)

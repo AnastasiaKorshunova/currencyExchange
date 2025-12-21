@@ -91,7 +91,9 @@ public class Main {
             TimeUnit.SECONDS.sleep(2);
 
             reporter.stop();
-            reporterThread.join(TimeUnit.SECONDS.toMillis(5));
+            while (reporter.isRunning() && reporterThread.isAlive()) {
+                reporterThread.join(TimeUnit.SECONDS.toMillis(1));
+            }
 
             logger.info("═".repeat(80));
             logger.info("FINAL SUMMARY");
