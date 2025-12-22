@@ -12,9 +12,23 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
 
+/**
+ * Application entry point.
+ * <p>
+ * Initializes the currency exchange system, loads participants,
+ * starts participant trading threads and a balance reporting thread,
+ * and waits for all tasks to complete.
+ * </p>
+ */
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
 
+    /**
+     * Starts the currency exchange application.
+     *
+     * @param args optional command-line arguments:
+     *             first argument may specify path to participants file
+     */
     public static void main(String[] args) {
         logger.info("Currency Exchange Application Starting...");
 
