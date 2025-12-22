@@ -2,7 +2,6 @@
 **Multithreaded Java Educational Project**
 
 ---
-
 ## Project Overview
 
 This project is a **multithreaded Java application** that simulates a **currency exchange**.  
@@ -43,9 +42,9 @@ The project was created as a **study assignment** to demonstrate:
 - **Log4J2** for logging  
 
 ### Restrictions
-- ❌ `synchronized`  
-- ❌ `volatile`  
-- ❌ `BlockingQueue`  
+-  `synchronized`  
+-  `volatile`  
+-  `BlockingQueue`  
 
 ---
 
