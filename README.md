@@ -49,7 +49,6 @@ The project was created as a **study assignment** to demonstrate:
 ---
 
 ## Multithreading Model
-
 - Each participant is executed as a **Callable**
 - All participants are managed by an **ExecutorService**
 - Exchange rates are protected by **ReadWriteLock**
@@ -85,7 +84,6 @@ All input data is assumed to be **correct**, as required by the task.
 ## Exchange (Singleton)
 
 The `Exchange` class:
-
 - stores exchange rates  
 - executes transactions  
 - manages shared resources  
