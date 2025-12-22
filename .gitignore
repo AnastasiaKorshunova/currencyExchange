@@ -30,3 +30,18 @@ bin/
 .DS_Store
 
 .Rhistory
+
+# IntelliJ IDEA
+.idea/
+
+# Maven / build
+target/
+out/
+
+# Logs
+logs/
+*.log
+*.gz
+
+# Compiled files
+*.class
