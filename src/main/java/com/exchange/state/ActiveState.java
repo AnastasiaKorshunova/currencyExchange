@@ -14,7 +14,6 @@ public class ActiveState implements ParticipantState {
 
     @Override
     public void handle(Participant participant) {
-        // State transition is controlled externally (ParticipantThread)
         logger.debug("Participant {} is ACTIVE", participant.getName());
     }
 

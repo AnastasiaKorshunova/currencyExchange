@@ -14,7 +14,6 @@ public class TradingState implements ParticipantState {
 
     @Override
     public void handle(Participant participant) {
-        // Transition back to ACTIVE is controlled externally (ParticipantThread)
         logger.debug("Participant {} is in TRADING state", participant.getName());
     }
 
