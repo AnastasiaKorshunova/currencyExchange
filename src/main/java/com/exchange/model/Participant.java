@@ -1,39 +1,42 @@
 package com.exchange.model;
 
-import com.exchange.state.ParticipantState;
 import com.exchange.state.ActiveState;
+import com.exchange.state.ParticipantState;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * Represents a participant in the currency exchange simulation. Each participant
- * keeps track of a unique identifier, their name, an associated balance, and the
- * current state describing whether they are active or paused. The class also
- * enforces a limit on the number of transactions a participant can be involved
- * with concurrently.
+ * Represents a participant in the currency exchange simulation.
+ * <p>
+ * Each participant has:
+ * - a unique identifier
+ * - a name
+ * - a thread-safe balance
+ * - a current state (State pattern)
+ * - a limit on concurrent transactions enforced atomically
  */
 public class Participant {
-    private static final AtomicInteger idGenerator = new AtomicInteger(0);
+
+    private static final AtomicInteger ID_GENERATOR = new AtomicInteger(0);
 
     private final int id;
     private final String name;
     private final Balance balance;
+
     private final AtomicReference<ParticipantState> state;
     private final AtomicInteger activeTransactions;
     private final int maxConcurrentTransactions;
 
     /**
-     * Creates a new participant with the provided name and balance while setting
-     * the maximum number of concurrent transactions the participant can take
-     * part in.
+     * Creates a new participant.
      *
-     * @param name the participant's display name
-     * @param balance the balance associated with the participant
-     * @param maxConcurrentTransactions the maximum number of simultaneous transactions allowed
+     * @param name participant name
+     * @param balance initial balance
+     * @param maxConcurrentTransactions maximum number of simultaneous transactions
      */
     public Participant(String name, Balance balance, int maxConcurrentTransactions) {
-        this.id = idGenerator.incrementAndGet();
+        this.id = ID_GENERATOR.incrementAndGet();
         this.name = name;
         this.balance = balance;
         this.state = new AtomicReference<>(new ActiveState());
@@ -41,97 +44,76 @@ public class Participant {
         this.maxConcurrentTransactions = maxConcurrentTransactions;
     }
 
-    /**
-     * Returns the unique identifier for the participant.
-     *
-     * @return participant identifier
-     */
+    /* ===================== Getters ===================== */
+
     public int getId() {
         return id;
     }
 
-    /**
-     * Returns the participant's name.
-     *
-     * @return participant name
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * Provides access to the participant's balance.
-     *
-     * @return participant balance
-     */
     public Balance getBalance() {
         return balance;
     }
 
-    /**
-     * Returns the current state of the participant.
-     *
-     * @return participant state
-     */
     public ParticipantState getState() {
         return state.get();
     }
 
-    /**
-     * Updates the participant's state.
-     *
-     * @param newState new state to apply
-     */
-    public void setState(ParticipantState newState) {
-        state.set(newState);
-    }
-
-    /**
-     * Indicates whether the participant can begin another transaction based on
-     * the configured concurrency limit.
-     *
-     * @return {@code true} if the participant can start a new transaction; otherwise {@code false}
-     */
-    public boolean canStartTransaction() {
-        return activeTransactions.get() < maxConcurrentTransactions;
-    }
-
-    /**
-     * Increments the number of active transactions for the participant.
-     */
-    public void incrementActiveTransactions() {
-        activeTransactions.incrementAndGet();
-    }
-
-    /**
-     * Decrements the number of active transactions for the participant.
-     */
-    public void decrementActiveTransactions() {
-        activeTransactions.decrementAndGet();
-    }
-
-    /**
-     * Returns the count of currently active transactions for the participant.
-     *
-     * @return current active transaction count
-     */
     public int getActiveTransactions() {
         return activeTransactions.get();
     }
 
-    /**
-     * Returns the maximum number of concurrent transactions the participant can
-     * engage in.
-     *
-     * @return maximum concurrent transaction count
-     */
     public int getMaxConcurrentTransactions() {
         return maxConcurrentTransactions;
     }
 
+    /* ===================== State handling ===================== */
+
+    public void setState(ParticipantState newState) {
+        state.set(newState);
+    }
+
+    /* ===================== Transaction slot control ===================== */
+
+    /**
+     * Attempts to atomically acquire a transaction slot.
+     *
+     * @return {@code true} if a slot was acquired, {@code false} otherwise
+     */
+    public boolean tryStartTransaction() {
+        while (true) {
+            int current = activeTransactions.get();
+            if (current >= maxConcurrentTransactions) {
+                return false;
+            }
+            if (activeTransactions.compareAndSet(current, current + 1)) {
+                return true;
+            }
+        }
+    }
+
+    /**
+     * Releases a previously acquired transaction slot.
+     */
+    public void finishTransaction() {
+        activeTransactions.decrementAndGet();
+    }
+
+    /* ===================== Object ===================== */
+
     @Override
     public String toString() {
-        return String.format("Participant{id=%d, name='%s', state=%s}",
-                id, name, state.get().getStateName());
+        return String.format(
+                "Participant{id=%d, name='%s', state=%s, activeTx=%d/%d}",
+                id,
+                name,
+                state.get().getStateName(),
+                activeTransactions.get(),
+                maxConcurrentTransactions
+        );
     }
 }
+

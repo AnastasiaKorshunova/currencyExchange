@@ -72,7 +72,6 @@ public class BalanceReporter implements Runnable {
             }
         } catch (InterruptedException e) {
             logger.info("Balance Reporter interrupted");
-            Thread.currentThread().interrupt();
         }
 
         logger.info("Balance Reporter stopped");

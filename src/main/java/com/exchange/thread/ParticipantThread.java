@@ -4,8 +4,10 @@ import com.exchange.model.Currency;
 import com.exchange.model.Participant;
 import com.exchange.model.Transaction;
 import com.exchange.service.Exchange;
+import com.exchange.state.ActiveState;
 import com.exchange.state.CompletedState;
 import com.exchange.state.TradingState;
+import com.exchange.state.WaitingState;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,35 +21,33 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Trading task representing a single exchange participant.
+ * Represents a trading task executed by a single participant.
  * <p>
- * Each instance of {@code ParticipantThread} models the behavior of one
- * participant on the currency exchange. The participant executes a predefined
- * number of transactions, potentially in parallel, using an internal thread pool.
+ * Each participant executes a fixed number of transactions using an internal
+ * thread pool. Concurrency is limited atomically via the participant API.
  * </p>
  *
  * <p>
- * This class implements {@link Callable} in order to return a summary of
- * completed and rejected transactions after execution.
+ * This class is responsible for:
+ * <ul>
+ *     <li>controlling transaction execution flow</li>
+ *     <li>enforcing concurrent transaction limits</li>
+ *     <li>managing participant state transitions</li>
+ * </ul>
  * </p>
  */
 public class ParticipantThread implements Callable<String> {
 
     private static final Logger logger = LogManager.getLogger(ParticipantThread.class);
 
-    /** Participant associated with this trading task. */
     private final Participant participant;
-
-    /** Shared exchange instance used to execute transactions. */
     private final Exchange exchange;
-
-    /** Total number of transactions this participant will attempt to execute. */
     private final int numberOfTransactions;
 
     /**
-     * Creates a new participant trading task.
+     * Creates a trading task for a participant.
      *
-     * @param participant participant performing trades
+     * @param participant participant executing trades
      * @param numberOfTransactions number of transactions to attempt
      */
     public ParticipantThread(Participant participant, int numberOfTransactions) {
@@ -57,14 +57,10 @@ public class ParticipantThread implements Callable<String> {
     }
 
     /**
-     * Main execution logic of the participant.
-     * <p>
-     * Creates an internal thread pool to execute transactions concurrently,
-     * waits for their completion, and returns a summary result.
-     * </p>
+     * Executes all participant transactions and waits for their completion.
      *
-     * @return summary of completed and rejected transactions
-     * @throws Exception if execution is interrupted
+     * @return execution summary
+     * @throws Exception if interrupted
      */
     @Override
     public String call() throws Exception {
@@ -73,158 +69,121 @@ public class ParticipantThread implements Callable<String> {
         ExecutorService transactionPool = Executors.newFixedThreadPool(
                 Math.max(1, participant.getMaxConcurrentTransactions()),
                 r -> {
-                    Thread thread = new Thread(r);
-                    thread.setName(participant.getName() + "-txn-" + thread.getId());
-                    thread.setDaemon(true);
-                    return thread;
+                    Thread t = new Thread(r);
+                    t.setName(participant.getName() + "-txn-" + t.getId());
+                    t.setDaemon(true);
+                    return t;
                 }
         );
 
-        CompletableFuture<Boolean>[] transactionFutures = createTransactions(transactionPool);
+        CompletableFuture<Boolean>[] futures = createTransactions(transactionPool);
 
-        int completedTransactions = 0;
-        int rejectedTransactions = 0;
+        int successful = 0;
+        int rejected = 0;
 
         try {
-            for (CompletableFuture<Boolean> future : transactionFutures) {
-                boolean success = future.join();
-                if (success) {
-                    completedTransactions++;
+            for (CompletableFuture<Boolean> future : futures) {
+                if (future.join()) {
+                    successful++;
                 } else {
-                    rejectedTransactions++;
+                    rejected++;
                 }
             }
         } finally {
             transactionPool.shutdown();
-            if (!transactionPool.awaitTermination(5, TimeUnit.SECONDS)) {
-                transactionPool.shutdownNow();
-            }
+            transactionPool.awaitTermination(5, TimeUnit.SECONDS);
         }
 
         participant.setState(new CompletedState());
 
         String result = String.format(
                 "Participant %s completed: %d successful, %d rejected",
-                participant.getName(), completedTransactions, rejectedTransactions
+                participant.getName(), successful, rejected
         );
 
         logger.info(result);
         return result;
     }
 
-    /**
-     * Creates asynchronous transaction tasks executed in the provided pool.
-     *
-     * @param transactionPool executor service for transactions
-     * @return array of futures representing transaction results
-     */
-    private CompletableFuture<Boolean>[] createTransactions(ExecutorService transactionPool) {
+    private CompletableFuture<Boolean>[] createTransactions(ExecutorService pool) {
         @SuppressWarnings("unchecked")
         CompletableFuture<Boolean>[] futures = new CompletableFuture[numberOfTransactions];
 
         for (int i = 0; i < numberOfTransactions; i++) {
-            futures[i] = CompletableFuture.supplyAsync(
-                    this::executeWithConcurrencyControl,
-                    transactionPool
-            );
+            futures[i] = CompletableFuture.supplyAsync(this::executeWithConcurrencyControl, pool);
         }
         return futures;
     }
 
     /**
-     * Executes a transaction with concurrency and state control.
-     * <p>
-     * Ensures that the participant is allowed to trade and that the maximum
-     * number of concurrent transactions is not exceeded.
-     * </p>
+     * Executes a single transaction while respecting concurrency limits.
      *
-     * @return {@code true} if transaction was successful
+     * @return {@code true} if transaction succeeded, {@code false} otherwise
      */
     private boolean executeWithConcurrencyControl() {
-        if (!participant.getState().canTrade()) {
-            logger.warn("Participant {} cannot trade in current state: {}",
-                    participant.getName(), participant.getState().getStateName());
-            sleepSilently(500);
-            return false;
+
+        while (!participant.tryStartTransaction()) {
+            participant.setState(new WaitingState());
+            sleepSilently(100);
         }
 
-        while (!participant.canStartTransaction()) {
-            logger.debug("Participant {} waiting for available transaction slot",
-                    participant.getName());
-            sleepSilently(300);
-        }
-
-        participant.getState().handle(participant);
         participant.setState(new TradingState());
-        participant.incrementActiveTransactions();
 
         try {
-            boolean success = executeRandomTransaction();
-            sleepSilently(ThreadLocalRandom.current().nextInt(500, 1501));
-            return success;
+            return executeRandomTransaction();
         } finally {
-            participant.decrementActiveTransactions();
-            participant.getState().handle(participant);
+            participant.finishTransaction();
+            participant.setState(new ActiveState());
         }
     }
 
     /**
-     * Executes a randomly generated currency exchange transaction.
+     * Executes a randomly generated exchange transaction.
      *
      * @return {@code true} if transaction completed successfully
      */
     private boolean executeRandomTransaction() {
+
         Currency[] currencies = Currency.values();
-        Currency fromCurrency = currencies[
-                ThreadLocalRandom.current().nextInt(currencies.length)
-                ];
-        Currency toCurrency;
+        Currency from = currencies[ThreadLocalRandom.current().nextInt(currencies.length)];
+        Currency to;
 
         do {
-            toCurrency = currencies[
-                    ThreadLocalRandom.current().nextInt(currencies.length)
-                    ];
-        } while (toCurrency == fromCurrency);
+            to = currencies[ThreadLocalRandom.current().nextInt(currencies.length)];
+        } while (to == from);
 
-        BigDecimal maxAmount = participant.getBalance().getAmount(fromCurrency);
+        BigDecimal maxAmount = participant.getBalance().getAmount(from);
         if (maxAmount.compareTo(BigDecimal.ZERO) <= 0) {
-            logger.debug("Participant {} has no {} to exchange",
-                    participant.getName(), fromCurrency);
             return false;
         }
 
         BigDecimal amount = maxAmount
-                .multiply(BigDecimal.valueOf(
-                        ThreadLocalRandom.current().nextDouble() * 0.3 + 0.1
-                ))
+                .multiply(BigDecimal.valueOf(ThreadLocalRandom.current().nextDouble(0.1, 0.4)))
                 .setScale(2, RoundingMode.HALF_UP);
 
         if (amount.compareTo(BigDecimal.valueOf(0.01)) < 0) {
             amount = BigDecimal.valueOf(0.01);
         }
 
-        BigDecimal rate = exchange.getExchangeRate(fromCurrency, toCurrency);
+        BigDecimal rate = exchange.getExchangeRate(from, to);
 
         Transaction transaction = new Transaction.Builder()
                 .seller(participant)
-                .fromCurrency(fromCurrency)
-                .toCurrency(toCurrency)
+                .fromCurrency(from)
+                .toCurrency(to)
                 .amount(amount)
                 .rate(rate)
                 .status(Transaction.TransactionStatus.PENDING)
                 .build();
 
-        logger.debug("Participant {} attempting to exchange {} {} to {}",
-                participant.getName(), amount, fromCurrency, toCurrency);
+        logger.debug(
+                "Participant {} exchanging {} {} → {}",
+                participant.getName(), amount, from, to
+        );
 
         return exchange.executeTransaction(transaction);
     }
 
-    /**
-     * Sleeps without throwing checked exceptions.
-     *
-     * @param millis sleep duration in milliseconds
-     */
     private void sleepSilently(long millis) {
         try {
             TimeUnit.MILLISECONDS.sleep(millis);
