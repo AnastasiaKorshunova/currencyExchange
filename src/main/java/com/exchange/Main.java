@@ -46,7 +46,6 @@ public class Main {
             Exchange exchange = Exchange.getInstance();
             participants.forEach(exchange::registerParticipant);
 
-            // 🔹 Daemon balance reporter
             BalanceReporter reporter = new BalanceReporter(reportInterval);
             Thread reporterThread = new Thread(reporter, "BalanceReporter");
             reporterThread.setDaemon(true);
